@@ -42,4 +42,4 @@ Georgi Gardev
 
 ## License
 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](https://github.com/GeorgeSG/ecmascript-explained-2019/blob/master/LICENSE)
