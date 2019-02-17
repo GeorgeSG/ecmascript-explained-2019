@@ -14,7 +14,7 @@ Slides are in Bulgarian.
 
 ## Sources
 
-If you want to see the sources I've used, look at `SOURCES.md`
+If you want to see the sources I've used, look at [`SOURCES.md`](https://github.com/GeorgeSG/ecmascript-explained-2019/blob/master/SOURCES.md)
 
 ## Built With
 - [reveal.js](https://github.com/hakimel/reveal.js/) slides
