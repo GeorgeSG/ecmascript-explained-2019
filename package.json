@@ -1,0 +1,29 @@
+{
+  "name": "ecmascript-explained",
+  "description": "Slides for an 'ECMAScript Explained' presentation. In Bulgarian.",
+  "version": "1",
+  "author": {
+    "name": "Georgi Gardev",
+    "email": "georgi@gardev.com",
+    "url": "http://gardev.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "compile": "pug -P index.pug",
+    "watch": "pug -Pw index.pug"
+  },
+  "dependencies": {},
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "devDependencies": {
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ECMAScript Releases Explained - ES8, ES9 и поглед напред</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/solarized.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/custom.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>ECMAScript<br>Releases Explained</h2><em>ES8, ES9 и поглед напред</em>
+          <p class="fragment"><em>... и назад</em></p>
+        </section>
+        <section data-transition="slide-in fade-out">
+          <h2>#КОЙ</h2>
+          <div class="fragment about-me"><img data-src="assets/georgi.jpg" style="height: 300px">
+            <ul>
+              <li><img data-src="assets/icon-user.png">Георги</li>
+              <li><img data-src="assets/icon-email.png"><a href="mailto:georgi@gardev.com">georgi@gardev.com</a></li>
+              <li><img data-src="assets/icon-web.png"><a href="http://gardev.com" target="_blank">http://gardev.com</a></li>
+              <li><img data-src="assets/icon-twitter.png"><a href="https://twitter.com/georgesg92" target="_blank">georgesg92</a></li>
+            </ul>
+          </div>
+        </section>
+        <section data-background-image="assets/leanplum-background.svg" data-transition="fade" data-background-position="300px -800px" data-background-color="rgb(242, 241, 243)"><img class="logo padded" data-src="assets/leanplum-logo.svg">
+          <p class="fragment"><img class="logo padded" data-src="assets/vuejs.jpg" style="width: 100px"><img class="logo padded" data-src="assets/ts.png" style="width: 100px"><br><img class="fragment logo padded" data-src="assets/java.png" style="width: 100px"><img class="fragment logo padded" data-src="assets/python.svg" style="width: 100px"></p>
+        </section>
+        <section data-transition="fade-in slide-out"><img class="logo padded" data-src="assets/vmware.jpg"><img class="logo padded" data-src="assets/musala-soft.jpg"></section>
+        <section>Защо говоря за ECMAScript?</section>
+        <section>Често виждах това:
+          <pre><code>{
+  ...,
+  "babel": {
+    "presets": ["es2015", "react", "stage-2"]
+  },
+  ...,
+}</code></pre>
+          <pre class="fragment"><code>{
+  "transform-es2015-modules-commonjs",
+  "transform-es2017-object-entries",
+  "transform-object-rest-spread",
+  "transform-es2015-destructuring",
+}</code></pre>
+        </section>
+        <section>
+          <p>... и исках да разбера&nbsp;<strong>повече.</strong></p>
+          <p class="fragment">Тук съм, за да разкажа какво научих</p>
+          <p class="fragment">и&nbsp;<strong>имаше ли смисъл&nbsp;</strong>от цялото нещо?</p>
+        </section>
+        <section>
+          <p>Какво е&nbsp;<span class="blue">ECMAScript?</span><br><span class="fragment blue">стандарт</span></p>
+          <p>Каква е разликата с&nbsp;<span class="green">JavaScript?</span><br><span class="fragment green">имплементация / диалект</span></p>
+          <aside class="notes">A standard guarantees that if somebody writes a code following the rules of the standard then the code would run fine in a runtime if the runtime implements the same standard.</aside>
+        </section>
+        <section>
+          <p>Други диалекти:</p>
+          <ul>
+            <li>TypeScript</li>
+            <li>ActionScript</li>
+            <li>JScript</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>V8 - engine</li>
+              <li>Node.js - framework</li>
+            </ul>
+          </aside>
+        </section>
+        <section>
+          <h2><span class="red">ECMA</span><span>script</span></h2>
+        </section>
+        <section><img class="logo padded" data-src="assets/ecma.jpg">
+          <blockquote cite="https://www.ecma-international.org/">Ecma International is an industry association founded in 1961, dedicated to the standardization of information and communication systems.</blockquote>
+        </section>
+        <section>
+          <p>Ecma дефинират доста стандарти</p>
+          <p class="fragment">От ECMA-1 до ECMA-408</p>
+          <table>
+            <tr class="fragment">
+              <td class="strong">ECMA-408</td>
+              <td>Dart Programming Language</td>
+            </tr>
+            <tr class="fragment">
+              <td class="strong">ECMA-334</td>
+              <td>C# Programming Language</td>
+            </tr>
+            <tr class="fragment">
+              <td class="strong">ECMA-78</td>
+              <td>5¼-inch floppy disk</td>
+            </tr>
+          </table>
+        </section>
+        <section><img class="padded" data-src="assets/ecma-standards.png" style="height: 500px">
+          <aside class="notes">
+            <ul>
+              <li>ECMA-402 - ECMAScript internationalization API - JavaScript.Intl</li>
+              <li>ECMA-414 - ECMAScript Specification Suite</li>
+              <li>JavaScript, was originally named Mocha, later it was renamed to LiveScript, and then to JavaScript.</li>
+              <li>The LiveScript to JavaScript name change came because Netscape and Sun did a license agreement.</li>
+              <li>The language was then submitted for standarization to the ECMA International Organization. By that time, Netscape didn't allow the use of the "JavaScript" name, so the standarized language is named ECMAScript.</li>
+            </ul>
+          </aside>
+        </section>
+        <section>
+          <h2>История</h2>
+          <h4>на ECMA-262</h4>
+        </section>
+        <section>
+          <table>
+            <tr class="fragment">
+              <td class="right strong" style="width: 220px">1995</td>
+              <td>Brendan Eich създава JavaScript</td>
+            </tr>
+            <tr class="fragment">
+              <td class="right strong">Ноем. 1996</td>
+              <td>Netscape предоставя JavaScript за стандартизиране от Ecma</td>
+            </tr>
+            <tr class="fragment">
+              <td class="right strong">1996 - 1997</td>
+              <td>Ecma основава TC39</td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h2>TC39</h2>
+          <p>Technical Committee 39</p>
+          <p class="fragment"><a href="https://github.com/orgs/tc39/people" target="_blank">Github Team</a></p>
+          <aside class="notes"><code>yarn install -D tc39-members</code><br><code>const members = require('tc39-members');</code></aside>
+        </section>
+        <section>
+          <table>
+            <tr class="fragment">
+              <td class="right strong" style="width: 220px">Юни 1997</td>
+              <td>ECMA-262 - първата версия на ECMAScript</td>
+            </tr>
+            <tr class="fragment">
+              <td class="right strong">Юни 1998</td>
+              <td>ECMAScript 2</td>
+            </tr>
+            <tr class="fragment">
+              <td class="right strong">Дек. 1999</td>
+              <td>ECMAScript 3</td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <table>
+            <tr class="fragment">
+              <td class="right strong" style="width: 220px">2003</td>
+              <td>ECMAScript 4 е изоставена</td>
+            </tr>
+            <tr class="fragment">
+              <td class="right strong">Февр. 2005</td>
+              <td>Jesse James Garrett дефинира&nbsp;<a href="https://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="_blank">Ajax</a></td>
+            </tr>
+            <tr class="fragment">
+              <td class="right strong">2005</td>
+              <td>Brendan Eich и Mozilla се присъединяват към Ecma. ECMAScript 4 reboot.</td>
+            </tr>
+            <tr class="fragment">
+              <td colspan="2">Yahoo & Microsoft са против ECMAScript 4 и създават ECMAScript 3.1</td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <table>
+            <tr class="fragment">
+              <td class="right strong" style="width: 220px">2009</td>
+              <td>Осло, Норвегия - ECMAScript 3.1 е преименуван на ECMAScript 5</td>
+            </tr>
+            <tr class="fragment">
+              <td class="right strong">Юни 2011</td>
+              <td>ECMAScript 5.1</td>
+            </tr>
+          </table>
+          <aside class="notes">
+            - 2009 - Oslo, Norway
+            - es5 - strict mode, Array.prototype forEach and map, JSON support
+          </aside>
+        </section>
+        <section>
+          <p><strong>2015</strong>&nbsp- ECMAScript 6</p>
+          <p class="fragment">TC39 решава да започнат годишни release-и</p>
+          <p class="fragment">ES6 e преименуван на ECMAScript 2015</p>
+        </section>
+        <section>
+          <p>ECMAScript 2016 (ES7)</p>
+          <p>ECMAScript 2017 (<span class="fragment highlight-blue">ES8</span>)</p>
+          <p>ECMAScript 2018 (<span class="fragment highlight-blue">ES9</span>)</p>
+        </section>
+        <section>
+          <h2>ECMAScript 2017</h2>
+          <p class="fragment blue">ES8</p>
+        </section>
+        <section>
+          <p>String padding (<code>padStart</code>&nbsp;и&nbsp;<code>padEnd</code>)</p>
+        </section>
+        <section><code>Object.values()</code>
+          <pre class="fragment"><code>const countries = {
+  BR: "Brazil",
+  DE: "Germany",
+  BG: "Bulgaria",
+  US: "United States of America"
+};
+Object.values(countries);</code></pre>
+          <pre class="fragment"><code>// ["Brazil", "Germany", "Bulgaria", "United States of America"]</code></pre>
+        </section>
+        <section><code>Object.entries()</code>
+          <pre class="fragment"><code>const countries = {
+  BR: "Brazil",
+  DE: "Germany",
+  BG: "Bulgaria",
+  US: "United States of America"
+};
+Object.entries(countries);</code></pre>
+          <pre class="fragment"><code>[["BR", "Brazil"], ["DE", "Germany"],
+["BG", "Bulgaria"], ["US","United States of America"]]</code></pre>
+        </section>
+        <section><code>Object.getOwnPropertyDescriptors()</code>
+          <aside class="notes">one practial application is to use with Object.assign()</aside>
+        </section>
+        <section>
+          <p>Последна запетая за параметри на функция</p>
+          <pre class="fragment"><code>function myFunc(var1, var2, var3,) {
+ // ...
+}</code></pre>
+          <pre class="fragment"><code>myFunc(10, 20, 30,);</code></pre>
+          <pre class="fragment"><code>myFunc(
+  10,
+  20,
+  30,
+);</code></pre>
+        </section>
+        <section>
+          <p>Shared memory and atomics</p>
+        </section>
+        <section>
+          <p><code>async</code>&nbsp;/&nbsp;<code>await</code></p>
+          <pre class="fragment"><code>function loadContentFromServer() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('hello');
+    }, 3000);
+  });
+}
+
+async function getContent() {
+  const result = await loadContentFromServer();
+  console.log(result);
+}</code></pre>
+          <p class="fragment"><code>await</code>&nbsp;работи и с&nbsp;<code>Promise.all()</code>
+            <aside class="notes">fun fact - използва генератори (funtction*() { ... yield })</aside>
+          </p>
+        </section>
+        <section data-background-image="assets/clap.gif"></section>
+        <section>
+          <h2>ECMAScript 2018</h2>
+        </section>
+        <section>
+          <p>Regexes!</p>
+        </section>
+        <section>
+          <p>Rest/Spread Properties</p>
+        </section>
+        <section><code>Promise.prototype.finally</code>
+          <pre class="fragment"><code>function doSomething() {
+  doSomething1()
+    .then(doSomething2)
+    .then(doSomething3)
+    .catch(err => {
+      console.log(err);
+    })
+    .finally(() => {
+      // always executes.
+    });
+}</code></pre>
+        </section>
+        <section>
+          <p>Asynchronous Iteration</p>
+        </section>
+        <section data-background-image="assets/future.jpg" data-background-size="contain"></section>
+        <section>
+          <h2>Release Cycle</h2>
+          <p class="fragment">или как да избегнем ES4 2.0</p>
+        </section>
+        <section>
+          <h2>Proposals</h2>
+        </section>
+        <section>
+          <h2>Strawman</h2>
+          <h4>Stage 0</h4>
+        </section>
+        <section>
+          <h2>Proposal</h2>
+          <h4>Stage 1</h4>
+        </section>
+        <section>
+          <h2>Draft</h2>
+          <h4>Stage 2</h4>
+        </section>
+        <section>
+          <h2>Candidate</h2>
+          <h4>Stage 3</h4>
+        </section>
+        <section>
+          <h2>Finished</h2>
+          <h4>Stage 4</h4>
+        </section>
+        <section>какво може да се ползва днес</section>
+        <section>струва ли си?</section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: false,
+        controlsTutorial: false,
+        history: true,
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>

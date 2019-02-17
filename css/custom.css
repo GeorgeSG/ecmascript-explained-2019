@@ -1,0 +1,88 @@
+.reveal {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+  text-transform: none;
+}
+
+.reveal section img {
+  border: 0;
+}
+
+.reveal section img.logo {
+  height: 100px;
+}
+
+.reveal section img.padded {
+  background: #fff;
+  padding: 20px;
+  margin: 0 10px;
+}
+
+.yellow {
+  color: #b58900;
+}
+
+.orange {
+  color: #cb4b16;
+}
+
+.red {
+  color: #dc322f;
+}
+
+.magenta {
+  color: #d33682;
+}
+
+.violet {
+  color: #6c71c4;
+}
+
+.blue {
+  color: #268bd2;
+}
+
+.cyan {
+  color: #2aa198;
+}
+
+.green {
+  color: #859900;
+}
+
+.strong {
+  font-weight: bold !important;
+}
+
+.right {
+  text-align: right !important;
+}
+
+.about-me {
+  display: flex;
+  justify-content: center;
+}
+
+.about-me ul {
+  list-style: none;
+}
+
+.about-me ul li {
+  display: flex;
+  align-items: center;
+  line-height: 2em;
+}
+
+.reveal section .about-me img {
+  box-shadow: none;
+  margin-right: 20px;
+  height: 32px;
+}
