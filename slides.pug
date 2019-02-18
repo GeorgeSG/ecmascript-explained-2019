@@ -176,9 +176,9 @@
       a(href="https://github.com/orgs/tc39/people" target="_blank") Github Team
 
     aside.notes
-      code yarn install -D tc39-members
+      code.inline yarn install -D tc39-members
       br
-      code const members = require('tc39-members');
+      code.inline const members = require('tc39-members');
 
   section
     table
@@ -241,9 +241,9 @@
 
   section
     h3 String padding (
-      code padStart
+      code.inline padStart
       | &nbsp;и&nbsp;
-      code padEnd
+      code.inline padEnd
       | )
     pre.fragment
       code
@@ -261,7 +261,7 @@
 
   section
     h3
-      code Object.values()
+      code.inline Object.values()
     pre.fragment
       code
         | const countries = {
@@ -277,7 +277,7 @@
 
   section
     h3
-      code Object.entries()
+      code.inline Object.entries()
     pre.fragment
       code
         | const countries = {
@@ -295,7 +295,7 @@
 
   section
     h4
-      code Object.getOwnPropertyDescriptors()
+      code.inline Object.getOwnPropertyDescriptors()
     pre.fragment
       code
         | const randomObject = {
@@ -347,7 +347,7 @@
   section
     h3 Shared memory and atomics
     p
-      code SharedArrayBuffer
+      code.inline SharedArrayBuffer
       pre
         code
           | // main.js
@@ -369,7 +369,7 @@
   section
     h3 Shared memory and atomics
     p
-      code Atomics
+      code.inline Atomics
       pre
         code
           | // main.js
@@ -385,9 +385,9 @@
           | Atomics.wake(ta: Int32Array, index, count)
   section
     h3
-      code async
+      code.inline async
       | &nbsp;/&nbsp;
-      code await
+      code.inline await
     pre.fragment
       code
         | function loadContentFromServer() {
@@ -421,14 +421,14 @@
   section
     h3 Look behind
     p Positive (
-      code ?<=#...
+      code.inline ?<=#...
       | )
     pre
       code
         | "$foo #foo @foo".replace(/(?<=#)foo/g, 'XXX')
         | "$foo #XXX @foo"
     p Negative (
-      code #{'?<!#...'}
+      code.inline #{'?<!#...'}
       | )
     pre
       code
@@ -445,7 +445,7 @@
   section
     h3 Named Capture Groups
       h4 (
-        code #{"?<name>"}
+        code.inline #{"?<name>"}
         | )
     p.fragment преди
     pre.fragment
@@ -505,7 +505,7 @@
 
   section
     h3
-      code Promise.prototype.finally
+      code.inline Promise.prototype.finally
     p.fragment
       em FINALLY!
     pre.fragment
@@ -546,7 +546,7 @@
 
   section
     h3 Asynchronous Iteration
-    code for-await-of
+    code.inline for-await-of
     pre.fragment
       code
         | for await (item of asyncFunction()) {
@@ -645,9 +645,9 @@
 
   section
     h3
-      code Object.fromEntries()
+      code.inline Object.fromEntries()
     h4.fragment Обратното на&nbsp;
-      code Object.entries()
+      code.inline Object.entries()
     pre.fragment
       code Object.fromEntries([ ['foo', 1], ['bar', 2] ]);
     pre.fragment
@@ -684,7 +684,7 @@
 
   section
     h3
-      code String.prototype.{trimStart,trimEnd}
+      code.inline String.prototype.{trimStart,trimEnd}
     pre
       code
         | "  abc  ".trimStart() // "abc  "
@@ -712,7 +712,7 @@
 
   section
     h3
-      code Array.prototype.{flat,flatMap}
+      code.inline Array.prototype.{flat,flatMap}
     pre
       code
         | const array = [1, [2, [3]]];
@@ -723,16 +723,16 @@
 
   section(data-fullscreen)
     h3
-      code Array.prototype.flat
+      code.inline Array.prototype.flat
     h4
       a(href="https://developers.google.com/web/updates/2018/03/smooshgate" target="_blank") #SmooshGate
     ul
       li.fragment
-        code Array.prototype.flat
+        code.inline Array.prototype.flat
         | &nbsp;e трябвало да се казва&nbsp;
-        code flatten
+        code.inline flatten
       li.fragment MooTools дефинира&nbsp;
-        code Array.prototype.flatten
+        code.inline Array.prototype.flatten
       li.fragment ... и в експериментална версия сме счупили половината интернет
 
   section
@@ -747,7 +747,7 @@
   section
     h3
       a(href="https://github.com/tc39/proposal-dynamic-import" target="_blank")
-        code proposal-dynamic-import
+        code.inline proposal-dynamic-import
     pre.fragment
       code
         | import(`./language-packs/${navigator.language}.js`)
@@ -769,7 +769,7 @@
   section
     h3
       a(href="https://github.com/tc39/proposal-bigint" target="_blank")
-        code proposal-bigint
+        code.inline proposal-bigint
     ul
       li.fragment Нов примитивен тип за репрезентация на числа над 2^53
       li.fragment Литерал:&nbsp
@@ -787,14 +787,14 @@
   section
     h3
       a(href="https://github.com/tc39/proposal-decorators" target="_blank")
-        code proposal-decorators
+        code.inline proposal-decorators
     p.fragment Native @decorators
     p.fragment Има polyfill за babel
 
   section
     h3
       a(href="https://github.com/tc39/proposal-temporal" target="_blank")
-        code proposal-temporal
+        code.inline proposal-temporal
     p.fragment Нов стандартен модул за работа с часове и дати
     pre.fragment
       code
@@ -858,12 +858,12 @@
       a(href="https://babeljs.io/docs/en/babel-preset-env" target="_blank") @babel/preset-env
       ul.fragment
         li.small
-          code "targets": "> 0.25%, not dead"
+          code.inline "targets": "> 0.25%, not dead"
           | &nbsp (
           a(href="https://github.com/browserslist/browserslist#queries" target="_blank") browserlist spec
           | )
         li.small
-          code "useBuiltIns": "usage" | "entry" // core-js
+          code.inline "useBuiltIns": "usage" | "entry" // core-js
     p.fragment
       span.green @babel/plugin-transform-dotall-regex
 
