@@ -16,22 +16,25 @@
           <h2>ECMAScript<br>Releases Explained</h2><em>ES8, ES9 и поглед напред</em>
           <p class="fragment"><em>... и назад</em></p>
         </section>
-        <section data-transition="slide-in fade-out">
+        <section data-fullscreen data-transition="slide-in fade-out">
           <h2>#КОЙ</h2>
-          <div class="fragment about-me"><img data-src="assets/georgi.jpg" style="height: 300px">
+          <div class="fragment about-me"><img class="photo" data-src="assets/georgi.jpg" style="height: 320px">
             <ul>
-              <li><img data-src="assets/icon-user.png">Георги</li>
+              <li><img data-src="assets/icon-user.png">Георги Гърдев</li>
               <li><img data-src="assets/icon-email.png"><a href="mailto:georgi@gardev.com">georgi@gardev.com</a></li>
               <li><img data-src="assets/icon-web.png"><a href="http://gardev.com" target="_blank">http://gardev.com</a></li>
+              <li><img data-src="assets/icon-github.png"><a href="https://github.com/GeorgeSG">GeorgeSG</a></li>
               <li><img data-src="assets/icon-twitter.png"><a href="https://twitter.com/georgesg92" target="_blank">georgesg92</a></li>
             </ul>
           </div>
         </section>
-        <section data-background-image="assets/leanplum-background.svg" data-transition="fade" data-background-position="300px -800px" data-background-color="rgb(242, 241, 243)"><img class="logo padded" data-src="assets/leanplum-logo.svg">
-          <p class="fragment"><img class="logo padded" data-src="assets/vuejs.jpg" style="width: 100px"><img class="logo padded" data-src="assets/ts.png" style="width: 100px"><br><img class="fragment logo padded" data-src="assets/java.png" style="width: 100px"><img class="fragment logo padded" data-src="assets/python.svg" style="width: 100px"></p>
+        <section data-fullscreen data-background-image="assets/leanplum-background.svg" data-background-position="300px -800px" data-transition="fade" data-transition-speed="fast" data-background-color="rgb(242, 241, 243)"><img class="leanplum-logo" data-src="assets/leanplum-logo.svg">
+          <p class="fragment leanplum-technologies"><img class="logo padded" data-src="assets/vuejs.jpg" style="width: 100px"><img class="logo padded" data-src="assets/ts.png" style="width: 100px"><br><img class="fragment logo padded" data-src="assets/java.png" style="width: 100px"><img class="fragment logo padded" data-src="assets/python.svg" style="width: 100px"></p>
         </section>
-        <section data-transition="fade-in slide-out"><img class="logo padded" data-src="assets/vmware.jpg"><img class="logo padded" data-src="assets/musala-soft.jpg"></section>
-        <section>Защо говоря за ECMAScript?</section>
+        <section data-fullscreen data-transition="fade-in slide-out"><img class="logo padded" data-src="assets/vmware.jpg"><img class="logo padded" data-src="assets/musala-soft.jpg"></section>
+        <section>Защо говоря за ECMAScript?
+          <aside class="notes">- поглед на страничен наблюдател</aside>
+        </section>
         <section>Често виждах това:
           <pre><code>{
   ...,
@@ -53,7 +56,18 @@
           <p class="fragment">и&nbsp;<strong>имаше ли смисъл&nbsp;</strong>от цялото нещо?</p>
         </section>
         <section>
-          <p>Какво е&nbsp;<span class="blue">ECMAScript?</span><br><span class="fragment blue">стандарт</span></p>
+          <h2>Agenda</h2>
+          <ol>
+            <li class="fragment">ECMAScript - що е то и кратка история</li>
+            <li class="fragment">ES2017 и ES2018</li>
+            <li class="fragment">Бъдещето - release cycle</li>
+            <li class="fragment">ES2019</li>
+            <li class="fragment">... и след това</li>
+            <li class="fragment">Как да ползваме новите функционалности</li>
+          </ol>
+        </section>
+        <section>
+          <p>Какво е&nbsp;<span class="blue">ECMAScript?</span><br><span class="fragment blue">стандарт</span></p><br>
           <p>Каква е разликата с&nbsp;<span class="green">JavaScript?</span><br><span class="fragment green">имплементация / диалект</span></p>
           <aside class="notes">A standard guarantees that if somebody writes a code following the rules of the standard then the code would run fine in a runtime if the runtime implements the same standard.</aside>
         </section>
@@ -72,25 +86,25 @@
           </aside>
         </section>
         <section>
-          <h2><span class="red">ECMA</span><span>script</span></h2>
+          <h2><span class="fragment highlight-red">ECMA</span><span>script</span></h2>
         </section>
         <section><img class="logo padded" data-src="assets/ecma.jpg">
           <blockquote cite="https://www.ecma-international.org/">Ecma International is an industry association founded in 1961, dedicated to the standardization of information and communication systems.</blockquote>
         </section>
         <section>
           <p>Ecma дефинират доста стандарти</p>
-          <p class="fragment">От ECMA-1 до ECMA-408</p>
+          <p class="fragment">От ECMA-1 до ECMA-417</p>
           <table>
             <tr class="fragment">
-              <td class="strong">ECMA-408</td>
+              <td class="strong right">ECMA-408</td>
               <td>Dart Programming Language</td>
             </tr>
             <tr class="fragment">
-              <td class="strong">ECMA-334</td>
+              <td class="strong right">ECMA-334</td>
               <td>C# Programming Language</td>
             </tr>
             <tr class="fragment">
-              <td class="strong">ECMA-78</td>
+              <td class="strong right">ECMA-78</td>
               <td>5¼-inch floppy disk</td>
             </tr>
           </table>
@@ -125,6 +139,14 @@
               <td>Ecma основава TC39</td>
             </tr>
           </table>
+          <aside class="notes">
+            - inspired by Java, Scheme, and Self.
+            - Mocha -> LiveScript -> JavaScript
+            - surf the tidal wave of Java and ship JavaScript as companion.
+            - Netscape стандартизира заради заплахата от Майкрософт да превземе JavaScript
+            - Netscape забранява ползването на името JavaScript
+            - JavaScript в момента е trademark на Oracle
+          </aside>
         </section>
         <section>
           <h2>TC39</h2>
@@ -152,7 +174,7 @@
           <table>
             <tr class="fragment">
               <td class="right strong" style="width: 220px">2003</td>
-              <td>ECMAScript 4 е изоставена</td>
+              <td>ECMAScript 4 е изоставен</td>
             </tr>
             <tr class="fragment">
               <td class="right strong">Февр. 2005</td>
@@ -160,10 +182,10 @@
             </tr>
             <tr class="fragment">
               <td class="right strong">2005</td>
-              <td>Brendan Eich и Mozilla се присъединяват към Ecma. ECMAScript 4 reboot.</td>
+              <td>Brendan Eich и Mozilla се присъединяват към Ecma. ECMAScript 4 reboot</td>
             </tr>
             <tr class="fragment">
-              <td colspan="2">Yahoo & Microsoft са против ECMAScript 4 и създават ECMAScript 3.1</td>
+              <td colspan="2">Yahoo & Microsoft създават ECMAScript 3.1</td>
             </tr>
           </table>
         </section>
@@ -171,7 +193,7 @@
           <table>
             <tr class="fragment">
               <td class="right strong" style="width: 220px">2009</td>
-              <td>Осло, Норвегия - ECMAScript 3.1 е преименуван на ECMAScript 5</td>
+              <td>Осло, Норвегия<span class="fragment">&nbsp;- ECMAScript 3.1 е преименуван на ECMAScript 5</span></td>
             </tr>
             <tr class="fragment">
               <td class="right strong">Юни 2011</td>
@@ -179,8 +201,11 @@
             </tr>
           </table>
           <aside class="notes">
-            - 2009 - Oslo, Norway
-            - es5 - strict mode, Array.prototype forEach and map, JSON support
+            <ul>
+              <li>2009 - Oslo, Norway</li>
+              <li>es5 - strict mode, Array.prototype forEach and map, JSON support</li>
+              <li>браузъри преди 2009 - transpile to ES3</li>
+            </ul>
           </aside>
         </section>
         <section>
@@ -195,12 +220,22 @@
         </section>
         <section>
           <h2>ECMAScript 2017</h2>
-          <p class="fragment blue">ES8</p>
+          <h3 class="fragment blue">ES8</h3>
         </section>
         <section>
-          <p>String padding (<code>padStart</code>&nbsp;и&nbsp;<code>padEnd</code>)</p>
+          <h3>String padding (<code>padStart</code>&nbsp;и&nbsp;<code>padEnd</code>)</h3>
+          <pre class="fragment"><code>str.padStart(targetLength [, padString])
+str.padEnd(targetLength [, padString])</code></pre>
+          <pre class="fragment"><code>"dev.bg".padStart(1);             // "dev.bg"
+"dev.bg".padStart(8);             // "  dev.bg"
+"dev.bg".padStart(10, "test");    // "testdev.bg"
+"dev.bg".padStart(14, "test");    // "testtestdev.bg"
+
+"loading".padEnd(10, ".");        // "loading..."</code></pre>
+          <p class="fragment small green">Достъпно във всички модерни браузъри</p>
         </section>
-        <section><code>Object.values()</code>
+        <section>
+          <h3><code>Object.values()</code></h3>
           <pre class="fragment"><code>const countries = {
   BR: "Brazil",
   DE: "Germany",
@@ -208,9 +243,11 @@
   US: "United States of America"
 };
 Object.values(countries);</code></pre>
-          <pre class="fragment"><code>// ["Brazil", "Germany", "Bulgaria", "United States of America"]</code></pre>
+          <pre class="fragment"><code>["Brazil", "Germany", "Bulgaria", "United States of America"]</code></pre>
+          <p class="fragment small green">Достъпно във всички модерни браузъри</p>
         </section>
-        <section><code>Object.entries()</code>
+        <section>
+          <h3><code>Object.entries()</code></h3>
           <pre class="fragment"><code>const countries = {
   BR: "Brazil",
   DE: "Germany",
@@ -220,12 +257,39 @@ Object.values(countries);</code></pre>
 Object.entries(countries);</code></pre>
           <pre class="fragment"><code>[["BR", "Brazil"], ["DE", "Germany"],
 ["BG", "Bulgaria"], ["US","United States of America"]]</code></pre>
-        </section>
-        <section><code>Object.getOwnPropertyDescriptors()</code>
-          <aside class="notes">one practial application is to use with Object.assign()</aside>
+          <p class="fragment small green">Достъпно във всички модерни браузъри</p>
         </section>
         <section>
-          <p>Последна запетая за параметри на функция</p>
+          <h4><code>Object.getOwnPropertyDescriptors()</code></h4>
+          <pre class="fragment"><code>const randomObject = {
+  name: "Georgi",
+  get answer() { return 42; }
+};
+Object.getOwnPropertyDescriptors(randomObject);</code></pre>
+          <pre class="fragment"><code>{
+  "name": {
+     "value": "Georgi",
+     "writable":true,
+     "enumerable":true,
+     "configurable":true
+  },
+  "answer":{
+     "enumerable":true,
+     "configurable":true,
+     "get": function foo()
+     "set": undefined
+  }
+}</code></pre>
+          <p class="fragment small green">Достъпно във всички модерни браузъри</p>
+          <aside class="notes">
+            <ul>
+              <li>може да се ползва за копиране на обекти - Object.assign не копира гетъри/сетъри и т.нdiv</li>
+              <li>configurable - дали конфигурацията може да се променя</li>
+            </ul>
+          </aside>
+        </section>
+        <section>
+          <h3>Запетая след последен параметър на функция</h3>
           <pre class="fragment"><code>function myFunc(var1, var2, var3,) {
  // ...
 }</code></pre>
@@ -235,17 +299,48 @@ Object.entries(countries);</code></pre>
   20,
   30,
 );</code></pre>
+          <p class="fragment small green">Достъпно във всички модерни браузъри</p>
         </section>
         <section>
-          <p>Shared memory and atomics</p>
+          <h3>Shared memory and atomics</h3>
+          <p><code>SharedArrayBuffer</code>
+            <pre><code>// main.js
+const worker = new Worker('worker.js');
+
+// To be shared
+const sharedBuffer = new SharedArrayBuffer(
+    10 * Int32Array.BYTES_PER_ELEMENT);
+
+// Share sharedBuffer with the worker
+worker.postMessage({sharedBuffer});</code></pre>
+            <pre><code>// worker.js
+self.addEventListener('message', function (event) {
+    const {sharedBuffer} = event.data;
+    const sharedArray = new Int32Array(sharedBuffer);
+});</code></pre>
+          </p>
         </section>
         <section>
-          <p><code>async</code>&nbsp;/&nbsp;<code>await</code></p>
+          <h3>Shared memory and atomics</h3>
+          <p><code>Atomics</code>
+            <pre><code>// main.js
+console.log('notifying...');
+Atomics.store(sharedArray, 0, 123);
+
+// worker.js
+while (Atomics.load(sharedArray, 0) !== 123);
+console.log('notified');</code></pre>
+            <pre><code>Atomics.wait(ta: Int32Array, index, value, timeout)
+Atomics.wake(ta: Int32Array, index, count)</code></pre>
+          </p>
+        </section>
+        <section>
+          <h3><code>async</code>&nbsp;/&nbsp;<code>await</code></h3>
           <pre class="fragment"><code>function loadContentFromServer() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve('hello');
-    }, 3000);
+      resolve('success');
+    }, 1000);
   });
 }
 
@@ -253,21 +348,81 @@ async function getContent() {
   const result = await loadContentFromServer();
   console.log(result);
 }</code></pre>
-          <p class="fragment"><code>await</code>&nbsp;работи и с&nbsp;<code>Promise.all()</code>
-            <aside class="notes">fun fact - използва генератори (funtction*() { ... yield })</aside>
-          </p>
+          <p class="fragment"><code>await</code>&nbsp;работи и с&nbsp;<code>Promise.all()</code></p>
+          <p class="fragment">Имплементирано е подобно на генератор</p>
+          <p class="fragment small green">Достъпно във всички модерни браузъри</p>
         </section>
         <section data-background-image="assets/clap.gif"></section>
         <section>
           <h2>ECMAScript 2018</h2>
         </section>
         <section>
-          <p>Regexes!</p>
+          <h3>Regexes!</h3>
         </section>
         <section>
-          <p>Rest/Spread Properties</p>
+          <h3>Look behind</h3>
+          <p>Positive (<code>?<=#...</code>)</p>
+          <pre><code>"$foo #foo @foo".replace(/(?<=#)foo/g, 'XXX')
+"$foo #XXX @foo"</code></pre>
+          <p>Negative (<code>?&lt;!#...</code>)</p>
+          <pre><code>"$foo #foo @foo".replace(/(?&lt;!#)foo/g, 'XXX')
+"$XXX #foo @XXX"</code></pre>
         </section>
-        <section><code>Promise.prototype.finally</code>
+        <section>
+          <h3>Unicode Escapes</h3>
+          <pre><code>\p{UnicodePropertyName=UnicodePropertyValue}</code></pre>
+          <pre><code>/\p{Script=Greek}/u.test('μ') // true</code></pre>
+        </section>
+        <section>
+          <h3>Named Capture Groups
+            <h4>(<code>?&lt;name&gt;</code>)</h4>
+          </h3>
+          <p class="fragment">преди</p>
+          <pre class="fragment"><code>const r = /([0-9]{4})-([0-9]{2})-([0-9]{2})/;
+const results = r.exec('2018-07-12');
+console.log(results[1]); // 2018
+console.log(results[2]); // 07
+console.log(results[3]); // 12</code></pre>
+          <p class="fragment">сега</p>
+          <pre class="fragment"><code>const r = /(?&lt;year&gt;[0-9]{4})-(?&lt;month&gt;[0-9]{2})-(?&lt;day&gt;[0-9]{2})/;
+const results = r.exec('2018-07-12');
+console.log(results.groups.year);  // 2018
+console.log(results.groups.month); // 07
+console.log(results.groups.day);   // 12</code></pre>
+        </section>
+        <section>
+          <h3>\s (dotAll) Flag</h3>
+          <ul>
+            <li class="fragment">"." match-ва line terminators</li>
+            <li class="fragment">\s идва от singleline</li>
+          </ul>
+          <pre class="fragment"><code>/hello.world/.test('hello\nworld');  // false
+/hello.world/s.test('hello\nworld'); // true</code></pre>
+        </section>
+        <section>
+          <h3 class="red">Всички нововъедения за Regex-и<br>са достъпни само в Chrome :)</h3>
+        </section>
+        <section>
+          <h4>Rest Properties за object destructuring</h4>
+          <pre class="fragment"><code>let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+x; // 1
+y; // 2
+z; // { a: 3, b: 4 }</code></pre>
+          <h4>Spread Properties - object literals</h4>
+          <pre class="fragment"><code>let n = { x, y, ...z };
+n; // { x: 1, y: 2, a: 3, b: 4 }</code></pre>
+          <p class="fragment small red">Не е достъпно в Edge</p>
+        </section>
+        <section>
+          <h4>Пример: Rest/Spread Properties за попълване на дефолтни стойности</h4>
+          <pre><code>const DEFAULTS = {foo: 'a', bar: 'b'};
+const partialData = {foo: 1};
+
+const data = {...DEFAULTS, ...partialData};</code></pre>
+        </section>
+        <section>
+          <h3><code>Promise.prototype.finally</code></h3>
+          <p class="fragment"><em>FINALLY!</em></p>
           <pre class="fragment"><code>function doSomething() {
   doSomething1()
     .then(doSomething2)
@@ -279,40 +434,289 @@ async function getContent() {
       // always executes.
     });
 }</code></pre>
+          <p class="fragment small green">Достъпно във всички модерни браузъри<span class="fragment red">&nbsp;(... без Edge 17)</span></p>
         </section>
         <section>
-          <p>Asynchronous Iteration</p>
+          <h3>Asynchronous Iteration</h3>
+          <pre class="fragment"><code>async function process(array) {
+  await array.forEach(async i => {
+    await doSomething(i);
+  });
+}</code></pre>
+          <p class="fragment red">▲ това не работи</p>
+          <p class="fragment green">▼ това  работи</p>
+          <pre class="fragment"><code>async function process(array) {
+  for await (let i of array) {
+    doSomething(i);
+  }
+}</code></pre>
+          <p class="fragment small red">Не е достъпно в Edge</p>
         </section>
-        <section data-background-image="assets/future.jpg" data-background-size="contain"></section>
         <section>
+          <h3>Asynchronous Iteration</h3><code>for-await-of</code>
+          <pre class="fragment"><code>for await (item of asyncFunction()) {
+  console.log(line);
+}</code></pre>
+          <p class="fragment">Async generator functions</p>
+          <pre class="fragment"><code>async function* readLines(path) {
+  let file = await fileOpen(path);
+
+  try {
+    while (!file.EOF) {
+      yield await file.readLine();
+    }
+  } finally {
+    await file.close();
+  }
+}</code></pre>
+        </section>
+        <section data-background-image="assets/future.jpg" data-background-color="#000" data-background-size="contain"></section>
+        <section><img class="cycle" data-src="assets/icon-cycle.png">
           <h2>Release Cycle</h2>
-          <p class="fragment">или как да избегнем ES4 2.0</p>
+          <p class="fragment">... или как да избегнем ES4 2.0</p>
         </section>
         <section>
-          <h2>Proposals</h2>
+          <h3>Proposals</h3>
         </section>
         <section>
-          <h2>Strawman</h2>
+          <h3>Strawman</h3>
           <h4>Stage 0</h4>
+          <ul>
+            <li class="fragment">Трябва да се&nbsp;<a href="https://tc39.github.io/agreements/contributor/" target="_blank">регистрирате</a>&nbsp;като TC39 ECMAScript Contributor</li>
+            <li class="fragment">Предложението трябва да бъде разгледано на среща на TC39</li>
+          </ul>
         </section>
-        <section>
-          <h2>Proposal</h2>
+        <section data-fullscreen>
+          <h3>Proposal</h3>
           <h4>Stage 1</h4>
+          <ul>
+            <li class="fragment">Трябва да бъде идентифициран "Champion", отговорен за предложението</li>
+            <li class="fragment">Трябва да има примери, polyfill, high-level API и дискусия на алгоритъма и потенциални проблеми</li>
+            <li class="fragment blue">Stage 1 означава, че TC39 има желание да разгледа предложението</li>
+            <li class="fragment blue">Очаква се, че може да има големи промени след Stage 1</li>
+          </ul>
         </section>
         <section>
-          <h2>Draft</h2>
+          <h3>Draft</h3>
           <h4>Stage 2</h4>
+          <ul>
+            <li class="fragment">Първа версия на формална спецификация</li>
+            <li class="fragment">Експериментална имплементация</li>
+            <li class="fragment blue">Очаква се, че няма големи промени след Stage 2</li>
+          </ul>
         </section>
         <section>
-          <h2>Candidate</h2>
+          <h3>Candidate</h3>
           <h4>Stage 3</h4>
+          <ul>
+            <li class="fragment">Предложението е близо до финална форма</li>
+            <li class="fragment">Спецификацията е завършена и минала формално ревю</li>
+            <li class="fragment">Има поне 2 имплементации</li>
+            <li class="fragment blue">Очаква обратна връзка от имплементациите</li>
+            <li class="fragment blue">Промени са допустими само при критични проблеми</li>
+          </ul>
         </section>
         <section>
-          <h2>Finished</h2>
+          <h3>Finished</h3>
           <h4>Stage 4</h4>
+          <ul>
+            <li class="fragment">Има пълни тестове</li>
+            <li class="fragment">Две имплементации покриват всички тестове</li>
+            <li class="fragment blue">Предложението ще бъде включено в следващата версия на стандарта</li>
+          </ul>
         </section>
-        <section>какво може да се ползва днес</section>
-        <section>струва ли си?</section>
+        <section>
+          <h3>В деня на финализиране на нова ECMAScript версия всички предложения в Stage 4 стават част от нея.</h3>
+        </section>
+        <section>
+          <ul>
+            <li><a href="https://github.com/tc39/proposals/blob/master/finished-proposals.md" target="_blank">Приети предложения</a></li>
+            <li><a href="https://github.com/tc39/proposals" target="_blank">Активни предложения</a></li>
+            <li><a href="https://github.com/tc39/proposals/blob/master/stage-0-proposals.md" target="_blank">Stage 0 предложения</a></li>
+            <li><a href="https://github.com/tc39/agendas" target="_blank">Срещи на TC39</a></li>
+            <li><a href="https://github.com/tc39/tc39-notes" target="_blank">Meeting Minutes</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>ECMAScript 2019</h2>
+        </section>
+        <section>
+          <h3><code>Object.fromEntries()</code></h3>
+          <h4 class="fragment">Обратното на&nbsp;<code>Object.entries()</code></h4>
+          <pre class="fragment"><code>Object.fromEntries([ ['foo', 1], ['bar', 2] ]);</code></pre>
+          <pre class="fragment"><code>{
+  foo: 1,
+  bar: 2,
+}</code></pre>
+          <ul>
+            <li class="fragment">При еднакви key-ове, последния печели</li>
+            <li class="fragment">Ако key-ът не е string или symbol, ще бъде конвертиран към string</li>
+          </ul>
+        </section>
+        <section>
+          <h4>Пример:&nbsp<code class="inline">_.pick()</code>&nbsp;имплементация с&nbsp;<code class="inline">Object.fromEntries()</code></h4>
+          <pre><code>const address = {
+  street: "Geo Milev",
+  number: "14",
+  city: "Sofia"
+};
+pick(address, "street") // { street: "Geo Milev" }</code></pre>
+          <pre class="fragment"><code>function pick(object, ...keys) {
+  const filteredEntries = Object.entries(object)
+    .filter(([key, _value]) => keys.includes(key));
+  return Object.fromEntries(filteredEntries);
+}</code></pre>
+        </section>
+        <section>
+          <h3><code>String.prototype.{trimStart,trimEnd}</code></h3>
+          <pre><code>"  abc  ".trimStart() // "abc  "
+"  abc  ".trimEnd()   // "  abc"</code></pre>
+        </section>
+        <section>
+          <h3>optional catch binding</h3>
+          <pre><code>try {
+  ···
+} catch {
+  ···
+}</code></pre>
+          <pre class="fragment"><code>function isValidJSON(text) {
+  try {
+    JSON.parse(text);
+    return true;
+  } catch {
+    return false;
+  }
+}</code></pre>
+        </section>
+        <section>
+          <h3><code>Array.prototype.{flat,flatMap}</code></h3>
+          <pre><code>const array = [1, [2, [3]]];
+array.flat(); // [1, 2, [3]]
+array.flat(Infinity); // [1, 2, 3]</code></pre>
+          <pre><code>[2, 3, 4].flatMap((x) => [x, x * 2]); // [2, 4, 3, 6, 4, 8]</code></pre>
+        </section>
+        <section data-fullscreen>
+          <h3><code>Array.prototype.flat</code></h3>
+          <h4><a href="https://developers.google.com/web/updates/2018/03/smooshgate" target="_blank">Smooshgate</a></h4>
+          <ul>
+            <li class="fragment"><code>Array.prototype.flat</code>&nbsp;e трябвало да се казва&nbsp;<code>flatten</code></li>
+            <li class="fragment">MooTools дефинира&nbsp;<code>Array.prototype.flatten</code></li>
+            <li class="fragment">... и в експериментална версия сме счупили половината интернет</li>
+          </ul>
+        </section>
+        <section>и други...</section>
+        <section>
+          <h2>На хоризонта - какво идва след ES2019</h2>
+        </section>
+        <section>
+          <h3>Stage 3</h3>
+        </section>
+        <section>
+          <h3><a href="https://github.com/tc39/proposal-dynamic-import" target="_blank"><code>proposal-dynamic-import</code></a></h3>
+          <pre class="fragment"><code>import(`./language-packs/${navigator.language}.js`)</code></pre>
+          <pre class="fragment"><code><a href="books.html" data-entry-module="books">Books</a>
+<a href="movies.html" data-entry-module="movies">Movies</a>
+
+// on link click
+import(`./section-modules/${link.dataset.entryModule}.js`)
+  .then(module => {
+    module.loadPageInto(main);
+  })</code></pre>
+          <aside class="notes">
+            <blockquote>It returns a promise for the module namespace object of the requested module, which is created after fetching, instantiating, and evaluating all of the module's dependencies, as well as the module itself.</blockquote>
+          </aside>
+        </section>
+        <section>
+          <h3><a href="https://github.com/tc39/proposal-bigint" target="_blank"><code>proposal-bigint</code></a></h3>
+          <ul>
+            <li class="fragment">Нов примитивен тип за репрезентация на числа над 2^53</li>
+            <li class="fragment">Литерал:&nbsp<code>9007199254740991n</code></li>
+          </ul>
+          <pre class="fragment"><code>const theBiggestInt = 9007199254740991n;
+const alsoHuge = BigInt(9007199254740991); // 9007199254740991n
+const hugeButString = BigInt('9007199254740991'); // ↪ 9007199254740991n</code></pre>
+          <p class="fragment small green">Достъпно във Chromium и Chrome</p>
+        </section>
+        <section>
+          <h3>Stage 2</h3>
+        </section>
+        <section>
+          <h3><a href="https://github.com/tc39/proposal-decorators" target="_blank"><code>proposal-decorators</code></a></h3>
+          <p class="fragment">Native @decorators</p>
+          <p class="fragment">Има polyfill за babel</p>
+        </section>
+        <section>
+          <h3><a href="https://github.com/tc39/proposal-temporal" target="_blank"><code>proposal-temporal</code></a></h3>
+          <p class="fragment">Нов стандартен модул за работа с часове и дати</p>
+          <pre class="fragment"><code>let dateTimeInChicago = new CivilDateTime(2000, 12, 31, 23, 59)
+
+let instantInChicago =
+    dateTimeInChicago.withZone('America/Chicago');
+
+let instantInSydney =
+    new ZonedInstant(instantInChicago.instant, 'Australia/Sydney')
+
+let dateTimeInSydney = instantInSydney.toCivilDateTime()
+
+dateTimeInChicago.toString() // 2000-12-31T23:59:00.000000000
+dateTimeInSydney.toString()  // 2001-01-01T16:59:00.000000000</code></pre>
+          <p class="fragment">Има polyfill за babel</p>
+        </section>
+        <section>
+          <h2>Kакво и как да ползваме?</h2>
+        </section>
+        <section>
+          <p>ECMAScript 2015 (ES6) се поддържа от всички браузъри без Internet Explorer</p>
+          <ul>
+            <li class="small">(May 19, 2017)&nbsp;<a Href="https://medium.freecodecamp.org/you-might-not-need-to-transpile-your-javascript-4d5e0a438ca" target="_blank">You might not need to transpile your javascript</a></li>
+            <li class="small">IE вече не се поддържа. Но ще получава Security Updates до 2025</li>
+            <li class="small">(Според статията) през 2017-та IE има 3.24% пазарен дял</li>
+          </ul>
+        </section>
+        <section>
+          <p>ECMAScript 2017 е покрит от всички модерни браузъри</p>
+          <p class="fragment small">Не броя IE за модерен браузър</p>
+        </section>
+        <section>
+          <h3>MVPs</h3>
+          <ul>
+            <li><a href="http://kangax.github.io/compat-table/es2016plus/" target="_blank">kangax.github.io/compat-table</a></li>
+            <li><a href="https://caniuse.com" target="_blank">caniuse.com</a></li>
+          </ul>
+        </section>
+        <section>
+          <h3>babel</h3>
+          <p class="fragment"><span class="red">@babel/preset-es2016</span><br><span class="red">@babel/preset-es2017</span></p>
+          <p class="fragment"><span class="red">babel-preset-next</span></p>
+          <p class="fragment"><span class="red">@babel/preset-stage-0</span><br><span class="red">@babel/preset-stage-3</span></p>
+        </section>
+        <section>
+          <h3>babel + core-js</h3>
+          <p class="fragment"><a href="https://babeljs.io/docs/en/babel-preset-env" target="_blank">@babel/preset-env</a>
+            <ul class="fragment">
+              <li class="small"><code>"targets": "> 0.25%, not dead"</code>&nbsp (<a href="https://github.com/browserslist/browserslist#queries" target="_blank">browserlist spec</a>)</li>
+              <li class="small"><code>"useBuiltIns": "usage" | "entry" // core-js</code></li>
+            </ul>
+          </p>
+          <p class="fragment"><span class="green">@babel/plugin-transform-dotall-regex</span></p>
+        </section>
+        <section>
+          <h3>babel</h3>
+          <pre><code>{
+  "transform-es2015-modules-commonjs",
+  "transform-es2017-object-entries",
+  "transform-object-rest-spread",
+  "transform-es2015-destructuring",
+}</code></pre>
+          <pre><code>{ "@babel/preset-env" }</code></pre>
+        </section>
+        <section>
+          <h2>Заключение</h2>
+          <p>струва ли си?</p>
+        </section>
+        <section>
+          <h2>Q&A</h2>
+        </section>
       </div>
     </div>
     <script src="lib/js/head.min.js"></script>
@@ -326,7 +730,8 @@ async function getContent() {
           { src: 'plugin/markdown/marked.js' },
           { src: 'plugin/markdown/markdown.js' },
           { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/fullscreen/fullscreen.js'}
         ]
       });
     </script>

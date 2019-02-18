@@ -1,5 +1,6 @@
 .reveal {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+  color: #4e5f65;
 }
 
 .reveal h1,
@@ -10,6 +11,7 @@
 .reveal h6 {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
   text-transform: none;
+  color: #4e5f65;
 }
 
 .reveal section img {
@@ -20,10 +22,40 @@
   height: 100px;
 }
 
+.reveal blockquote {
+  padding: 20px;
+  background: #fff;
+}
+
+.reveal ul li,
+.reveal ol li {
+  line-height: 1.6em
+}
+
+.reveal section img.leanplum-logo {
+  position: fixed;
+  bottom: 70px;
+  left: 70px;
+  box-shadow: none;
+  background: none;
+  height: 100px;
+  margin: 0;
+}
+
+.leanplum-technologies {
+  position: fixed;
+  top: 70px;
+  right: 70px;
+}
+
 .reveal section img.padded {
   background: #fff;
   padding: 20px;
   margin: 0 10px;
+}
+
+.reveal section code.inline {
+  background: #fff;
 }
 
 .yellow {
@@ -34,7 +66,9 @@
   color: #cb4b16;
 }
 
-.red {
+.red,
+h3.red,
+.reveal .slides section .fragment.highlight-red.visible {
   color: #dc322f;
 }
 
@@ -46,7 +80,9 @@
   color: #6c71c4;
 }
 
-.blue {
+.blue,
+h3.blue,
+.reveal .slides section .fragment.highlight-blue.visible {
   color: #268bd2;
 }
 
@@ -54,12 +90,17 @@
   color: #2aa198;
 }
 
-.green {
+.green,
+.reveal .slides section .fragment.highlight-green.visible {
   color: #859900;
 }
 
 .strong {
   font-weight: bold !important;
+}
+
+.small {
+  font-size: 0.7em !important;
 }
 
 .right {
@@ -78,11 +119,15 @@
 .about-me ul li {
   display: flex;
   align-items: center;
-  line-height: 2em;
+  line-height: 1.7em;
 }
 
 .reveal section .about-me img {
   box-shadow: none;
   margin-right: 20px;
   height: 32px;
+}
+
+.reveal section img.cycle {
+  box-shadow: none;
 }

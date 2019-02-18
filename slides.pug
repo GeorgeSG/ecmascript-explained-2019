@@ -7,14 +7,14 @@
     p.fragment
       em ... и назад
 
-  section(data-transition="slide-in fade-out")
+  section(data-fullscreen data-transition="slide-in fade-out")
     h2 #КОЙ
     .fragment.about-me
-      img(data-src="assets/georgi.jpg" style="height: 300px")
+      img.photo(data-src="assets/georgi.jpg" style="height: 320px")
       ul
         li
           img(data-src="assets/icon-user.png")
-          | Георги
+          | Георги Гърдев
         li
           img(data-src="assets/icon-email.png")
           a(href="mailto:georgi@gardev.com") georgi@gardev.com
@@ -22,26 +22,35 @@
           img(data-src="assets/icon-web.png")
           a(href="http://gardev.com" target="_blank") http://gardev.com
         li
+          img(data-src="assets/icon-github.png")
+          a(href="https://github.com/GeorgeSG") GeorgeSG
+        li
           img(data-src="assets/icon-twitter.png")
           a(href="https://twitter.com/georgesg92" target="_blank") georgesg92
   section(
+      data-fullscreen
       data-background-image="assets/leanplum-background.svg"
-      data-transition="fade" data-background-position="300px -800px"
+      data-background-position="300px -800px"
+      data-transition="fade"
+      data-transition-speed="fast"
       data-background-color="rgb(242, 241, 243)"
   )
-    img.logo.padded(data-src="assets/leanplum-logo.svg")
-    p.fragment
+    img.leanplum-logo(data-src="assets/leanplum-logo.svg")
+    p.fragment.leanplum-technologies
       img.logo.padded(data-src="assets/vuejs.jpg" style='width: 100px')
       img.logo.padded(data-src="assets/ts.png" style='width: 100px')
       br
       img.fragment.logo.padded(data-src="assets/java.png" style='width: 100px')
       img.fragment.logo.padded(data-src="assets/python.svg" style='width: 100px')
 
-  section(data-transition="fade-in slide-out")
+  section(data-fullscreen data-transition="fade-in slide-out")
     img.logo.padded(data-src="assets/vmware.jpg")
     img.logo.padded(data-src="assets/musala-soft.jpg")
 
   section Защо говоря за ECMAScript?
+
+    aside.notes
+      | - поглед на страничен наблюдател
 
   section Често виждах това:
     pre
@@ -71,10 +80,21 @@
       | от цялото нещо?
 
   section
+    h2 Agenda
+    ol
+      li.fragment ECMAScript - що е то и кратка история
+      li.fragment ES2017 и ES2018
+      li.fragment Бъдещето - release cycle
+      li.fragment ES2019
+      li.fragment ... и след това
+      li.fragment Как да ползваме новите функционалности
+
+  section
     p Какво е&nbsp;
       span.blue ECMAScript?
       br
       span.fragment.blue стандарт
+    br
     p Каква е разликата с&nbsp;
       span.green JavaScript?
       br
@@ -96,7 +116,7 @@
 
   section
     h2
-      span.red ECMA
+      span.fragment.highlight-red ECMA
       span script
 
   section
@@ -105,16 +125,16 @@
 
   section
     p Ecma дефинират доста стандарти
-    p.fragment От ECMA-1 до ECMA-408
+    p.fragment От ECMA-1 до ECMA-417
     table
       tr.fragment
-        td.strong ECMA-408
+        td.strong.right ECMA-408
         td Dart Programming Language
       tr.fragment
-        td.strong ECMA-334
+        td.strong.right ECMA-334
         td C# Programming Language
       tr.fragment
-        td.strong ECMA-78
+        td.strong.right ECMA-78
         td 5¼-inch floppy disk
 
   section
@@ -144,6 +164,14 @@
         td.right.strong 1996 - 1997
         td Ecma основава TC39
 
+    aside.notes
+      | - inspired by Java, Scheme, and Self.
+      | - Mocha -> LiveScript -> JavaScript
+      | - surf the tidal wave of Java and ship JavaScript as companion.
+      | - Netscape стандартизира заради заплахата от Майкрософт да превземе JavaScript
+      | - Netscape забранява ползването на името JavaScript
+      | - JavaScript в момента е trademark на Oracle
+
   section
     h2 TC39
     p Technical Committee 39
@@ -171,29 +199,32 @@
     table
       tr.fragment
         td.right.strong(style='width: 220px') 2003
-        td ECMAScript 4 е изоставена
+        td ECMAScript 4 е изоставен
       tr.fragment
         td.right.strong Февр. 2005
         td Jesse James Garrett дефинира&nbsp;
           a(href="https://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="_blank") Ajax
       tr.fragment
         td.right.strong 2005
-        td Brendan Eich и Mozilla се присъединяват към Ecma. ECMAScript 4 reboot.
+        td Brendan Eich и Mozilla се присъединяват към Ecma. ECMAScript 4 reboot
       tr.fragment
-        td(colspan="2") Yahoo & Microsoft са против ECMAScript 4 и създават ECMAScript 3.1
+        td(colspan="2") Yahoo & Microsoft създават ECMAScript 3.1
 
   section
     table
       tr.fragment
         td.right.strong(style='width: 220px') 2009
-        td Осло, Норвегия - ECMAScript 3.1 е преименуван на ECMAScript 5
+        td Осло, Норвегия
+          span.fragment &nbsp;- ECMAScript 3.1 е преименуван на ECMAScript 5
       tr.fragment
         td.right.strong Юни 2011
         td ECMAScript 5.1
 
     aside.notes
-      | - 2009 - Oslo, Norway
-      | - es5 - strict mode, Array.prototype forEach and map, JSON support
+      ul
+        li 2009 - Oslo, Norway
+        li es5 - strict mode, Array.prototype forEach and map, JSON support
+        li браузъри преди 2009 - transpile to ES3
 
   section
     p
@@ -213,17 +244,31 @@
 
   section
     h2 ECMAScript 2017
-    p.fragment.blue ES8
+    h3.fragment.blue ES8
 
   section
-    p String padding (
+    h3 String padding (
       code padStart
       | &nbsp;и&nbsp;
       code padEnd
       | )
+    pre.fragment
+      code
+        | str.padStart(targetLength [, padString])
+        | str.padEnd(targetLength [, padString])
+    pre.fragment
+      code
+        | "dev.bg".padStart(1);             // "dev.bg"
+        | "dev.bg".padStart(8);             // "  dev.bg"
+        | "dev.bg".padStart(10, "test");    // "testdev.bg"
+        | "dev.bg".padStart(14, "test");    // "testtestdev.bg"
+        |
+        | "loading".padEnd(10, ".");        // "loading..."
+    p.fragment.small.green Достъпно във всички модерни браузъри
 
   section
-    code Object.values()
+    h3
+      code Object.values()
     pre.fragment
       code
         | const countries = {
@@ -234,10 +279,12 @@
         | };
         | Object.values(countries);
     pre.fragment
-      code // ["Brazil", "Germany", "Bulgaria", "United States of America"]
-  section
+      code ["Brazil", "Germany", "Bulgaria", "United States of America"]
+    p.fragment.small.green Достъпно във всички модерни браузъри
 
-    code Object.entries()
+  section
+    h3
+      code Object.entries()
     pre.fragment
       code
         | const countries = {
@@ -251,15 +298,43 @@
       code
         | [["BR", "Brazil"], ["DE", "Germany"],
         | ["BG", "Bulgaria"], ["US","United States of America"]]
+    p.fragment.small.green Достъпно във всички модерни браузъри
 
   section
-    code Object.getOwnPropertyDescriptors()
+    h4
+      code Object.getOwnPropertyDescriptors()
+    pre.fragment
+      code
+        | const randomObject = {
+        |   name: "Georgi",
+        |   get answer() { return 42; }
+        | };
+        | Object.getOwnPropertyDescriptors(randomObject);
+    pre.fragment
+      code
+        | {
+        |   "name": {
+        |      "value": "Georgi",
+        |      "writable":true,
+        |      "enumerable":true,
+        |      "configurable":true
+        |   },
+        |   "answer":{
+        |      "enumerable":true,
+        |      "configurable":true,
+        |      "get": function foo()
+        |      "set": undefined
+        |   }
+        | }
+    p.fragment.small.green Достъпно във всички модерни браузъри
 
     aside.notes
-      | one practial application is to use with Object.assign()
+      ul
+        li може да се ползва за копиране на обекти - Object.assign не копира гетъри/сетъри и т.нdiv
+        li configurable - дали конфигурацията може да се променя
 
   section
-    p Последна запетая за параметри на функция
+    h3 Запетая след последен параметър на функция
     pre.fragment
       code
         | function myFunc(var1, var2, var3,) {
@@ -274,12 +349,49 @@
         |   20,
         |   30,
         | );
+    p.fragment.small.green Достъпно във всички модерни браузъри
 
   section
-    p Shared memory and atomics
-
-  section
+    h3 Shared memory and atomics
     p
+      code SharedArrayBuffer
+      pre
+        code
+          | // main.js
+          | const worker = new Worker('worker.js');
+          |
+          | // To be shared
+          | const sharedBuffer = new SharedArrayBuffer(
+          |     10 * Int32Array.BYTES_PER_ELEMENT);
+          |
+          | // Share sharedBuffer with the worker
+          | worker.postMessage({sharedBuffer});
+      pre
+        code
+          | // worker.js
+          | self.addEventListener('message', function (event) {
+          |     const {sharedBuffer} = event.data;
+          |     const sharedArray = new Int32Array(sharedBuffer);
+          | });
+  section
+    h3 Shared memory and atomics
+    p
+      code Atomics
+      pre
+        code
+          | // main.js
+          | console.log('notifying...');
+          | Atomics.store(sharedArray, 0, 123);
+          |
+          | // worker.js
+          | while (Atomics.load(sharedArray, 0) !== 123);
+          | console.log('notified');
+      pre
+        code
+          | Atomics.wait(ta: Int32Array, index, value, timeout)
+          | Atomics.wake(ta: Int32Array, index, count)
+  section
+    h3
       code async
       | &nbsp;/&nbsp;
       code await
@@ -288,8 +400,8 @@
         | function loadContentFromServer() {
         |   return new Promise((resolve, reject) => {
         |     setTimeout(() => {
-        |       resolve('hello');
-        |     }, 3000);
+        |       resolve('success');
+        |     }, 1000);
         |   });
         | }
         |
@@ -302,9 +414,8 @@
       code await
       | &nbsp;работи и с&nbsp;
       code Promise.all()
-
-      aside.notes
-        | fun fact - използва генератори (funtction*() { ... yield })
+    p.fragment Имплементирано е подобно на генератор
+    p.fragment.small.green Достъпно във всички модерни браузъри
 
   section(data-background-image="assets/clap.gif")
 
@@ -312,13 +423,98 @@
     h2 ECMAScript 2018
 
   section
-    p Regexes!
+    h3 Regexes!
 
   section
-    p Rest/Spread Properties
+    h3 Look behind
+    p Positive (
+      code ?<=#...
+      | )
+    pre
+      code
+        | "$foo #foo @foo".replace(/(?<=#)foo/g, 'XXX')
+        | "$foo #XXX @foo"
+    p Negative (
+      code #{'?<!#...'}
+      | )
+    pre
+      code
+        | "$foo #foo @foo".replace(/(#{'?<!#'})foo/g, 'XXX')
+        | "$XXX #foo @XXX"
 
   section
-    code Promise.prototype.finally
+    h3 Unicode Escapes
+    pre
+      code \p{UnicodePropertyName=UnicodePropertyValue}
+    pre
+      code /\p{Script=Greek}/u.test('μ') // true
+
+  section
+    h3 Named Capture Groups
+      h4 (
+        code #{"?<name>"}
+        | )
+    p.fragment преди
+    pre.fragment
+      code
+        | const r = /([0-9]{4})-([0-9]{2})-([0-9]{2})/;
+        | const results = r.exec('2018-07-12');
+        | console.log(results[1]); // 2018
+        | console.log(results[2]); // 07
+        | console.log(results[3]); // 12
+    p.fragment сега
+    pre.fragment
+      code
+        | const r = #{"/(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/;"}
+        | const results = r.exec('2018-07-12');
+        | console.log(results.groups.year);  // 2018
+        | console.log(results.groups.month); // 07
+        | console.log(results.groups.day);   // 12
+
+  section
+    h3 \s (dotAll) Flag
+    ul
+      li.fragment "." match-ва line terminators
+      li.fragment \s идва от singleline
+    pre.fragment
+      code
+        | /hello.world/.test('hello\nworld');  // false
+        | /hello.world/s.test('hello\nworld'); // true
+
+  section
+    h3.red Всички нововъедения за Regex-и
+      br
+      | са достъпни само в Chrome :)
+
+  section
+    h4 Rest Properties за object destructuring
+    pre.fragment
+      code
+        | let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+        | x; // 1
+        | y; // 2
+        | z; // { a: 3, b: 4 }
+    h4 Spread Properties - object literals
+    pre.fragment
+      code
+        | let n = { x, y, ...z };
+        | n; // { x: 1, y: 2, a: 3, b: 4 }
+    p.fragment.small.red Не е достъпно в Edge
+
+  section
+    h4 Пример: Rest/Spread Properties за попълване на дефолтни стойности
+    pre
+      code
+        | const DEFAULTS = {foo: 'a', bar: 'b'};
+        | const partialData = {foo: 1};
+        |
+        | const data = {...DEFAULTS, ...partialData};
+
+  section
+    h3
+      code Promise.prototype.finally
+    p.fragment
+      em FINALLY!
     pre.fragment
       code
         | function doSomething() {
@@ -332,41 +528,366 @@
         |       // always executes.
         |     });
         | }
+    p.fragment.small.green Достъпно във всички модерни браузъри
+      span.fragment.red &nbsp;(... без Edge 17)
 
   section
-    p Asynchronous Iteration
-
-  section(data-background-image="assets/future.jpg" data-background-size="contain")
+    h3 Asynchronous Iteration
+    pre.fragment
+      code
+        | async function process(array) {
+        |   await array.forEach(async i => {
+        |     await doSomething(i);
+        |   });
+        | }
+    p.fragment.red ▲ това не работи
+    p.fragment.green ▼ това  работи
+    pre.fragment
+      code
+        | async function process(array) {
+        |   for await (let i of array) {
+        |     doSomething(i);
+        |   }
+        | }
+    p.fragment.small.red Не е достъпно в Edge
 
   section
+    h3 Asynchronous Iteration
+    code for-await-of
+    pre.fragment
+      code
+        | for await (item of asyncFunction()) {
+        |   console.log(line);
+        | }
+    p.fragment Async generator functions
+    pre.fragment
+      code
+        | async function* readLines(path) {
+        |   let file = await fileOpen(path);
+        |
+        |   try {
+        |     while (!file.EOF) {
+        |       yield await file.readLine();
+        |     }
+        |   } finally {
+        |     await file.close();
+        |   }
+        | }
+
+  section(data-background-image="assets/future.jpg" data-background-color='#000' data-background-size="contain")
+
+  section
+    img.cycle(data-src="assets/icon-cycle.png")
     h2 Release Cycle
-    p.fragment или как да избегнем ES4 2.0
+    p.fragment ... или как да избегнем ES4 2.0
 
   section
-    h2 Proposals
+    h3 Proposals
 
   section
-    h2 Strawman
+    h3 Strawman
     h4 Stage 0
+    ul
+      li.fragment Трябва да се&nbsp;
+        a(href="https://tc39.github.io/agreements/contributor/" target="_blank") регистрирате
+        | &nbsp;като TC39 ECMAScript Contributor
+      li.fragment Предложението трябва да бъде разгледано на среща на TC39
 
-  section
-    h2 Proposal
+  section(data-fullscreen)
+    h3 Proposal
     h4 Stage 1
+    ul
+      li.fragment Трябва да бъде идентифициран "Champion", отговорен за предложението
+      li.fragment Трябва да има примери, polyfill, high-level API и дискусия на алгоритъма и потенциални проблеми
+      li.fragment.blue Stage 1 означава, че TC39 има желание да разгледа предложението
+      li.fragment.blue Очаква се, че може да има големи промени след Stage 1
 
   section
-    h2 Draft
+    h3 Draft
     h4 Stage 2
+    ul
+      li.fragment Първа версия на формална спецификация
+      li.fragment Експериментална имплементация
+      li.fragment.blue Очаква се, че няма големи промени след Stage 2
 
   section
-    h2 Candidate
+    h3 Candidate
     h4 Stage 3
+    ul
+      li.fragment Предложението е близо до финална форма
+      li.fragment Спецификацията е завършена и минала формално ревю
+      li.fragment Има поне 2 имплементации
+      li.fragment.blue Очаква обратна връзка от имплементациите
+      li.fragment.blue Промени са допустими само при критични проблеми
 
   section
-    h2 Finished
+    h3 Finished
     h4 Stage 4
+    ul
+      li.fragment Има пълни тестове
+      li.fragment Две имплементации покриват всички тестове
+      li.fragment.blue Предложението ще бъде включено в следващата версия на стандарта
 
   section
-    | какво може да се ползва днес
+    h3 В деня на финализиране на нова ECMAScript версия всички предложения в Stage 4 стават част от нея.
 
   section
-    | струва ли си?
+    ul
+      li
+        a(href="https://github.com/tc39/proposals/blob/master/finished-proposals.md" target="_blank") Приети предложения
+      li
+        a(href="https://github.com/tc39/proposals" target="_blank") Активни предложения
+      li
+        a(href="https://github.com/tc39/proposals/blob/master/stage-0-proposals.md" target="_blank") Stage 0 предложения
+      li
+        a(href="https://github.com/tc39/agendas" target="_blank") Срещи на TC39
+      li
+        a(href="https://github.com/tc39/tc39-notes" target="_blank") Meeting Minutes
+
+  section
+    h2 ECMAScript 2019
+
+  section
+    h3
+      code Object.fromEntries()
+    h4.fragment Обратното на&nbsp;
+      code Object.entries()
+    pre.fragment
+      code Object.fromEntries([ ['foo', 1], ['bar', 2] ]);
+    pre.fragment
+      code
+        | {
+        |   foo: 1,
+        |   bar: 2,
+        | }
+    ul
+      li.fragment При еднакви key-ове, последния печели
+      li.fragment Ако key-ът не е string или symbol, ще бъде конвертиран към string
+
+  section
+    h4
+      | Пример:&nbsp
+      code.inline _.pick()
+      | &nbsp;имплементация с&nbsp;
+      code.inline Object.fromEntries()
+    pre
+      code
+        | const address = {
+        |   street: "Geo Milev",
+        |   number: "14",
+        |   city: "Sofia"
+        | };
+        | pick(address, "street") // { street: "Geo Milev" }
+    pre.fragment
+      code
+        | function pick(object, ...keys) {
+        |   const filteredEntries = Object.entries(object)
+        |     .filter(([key, _value]) => keys.includes(key));
+        |   return Object.fromEntries(filteredEntries);
+        | }
+
+  section
+    h3
+      code String.prototype.{trimStart,trimEnd}
+    pre
+      code
+        | "  abc  ".trimStart() // "abc  "
+        | "  abc  ".trimEnd()   // "  abc"
+
+  section
+    h3 optional catch binding
+    pre
+      code
+        | try {
+        |   ···
+        | } catch {
+        |   ···
+        | }
+    pre.fragment
+      code
+        | function isValidJSON(text) {
+        |   try {
+        |     JSON.parse(text);
+        |     return true;
+        |   } catch {
+        |     return false;
+        |   }
+        | }
+
+  section
+    h3
+      code Array.prototype.{flat,flatMap}
+    pre
+      code
+        | const array = [1, [2, [3]]];
+        | array.flat(); // [1, 2, [3]]
+        | array.flat(Infinity); // [1, 2, 3]
+    pre
+      code [2, 3, 4].flatMap((x) => [x, x * 2]); // [2, 4, 3, 6, 4, 8]
+
+  section(data-fullscreen)
+    h3
+      code Array.prototype.flat
+    h4
+      a(href="https://developers.google.com/web/updates/2018/03/smooshgate" target="_blank") Smooshgate
+    ul
+      li.fragment
+        code Array.prototype.flat
+        | &nbsp;e трябвало да се казва&nbsp;
+        code flatten
+      li.fragment MooTools дефинира&nbsp;
+        code Array.prototype.flatten
+      li.fragment ... и в експериментална версия сме счупили половината интернет
+
+  section
+    | и други...
+
+  section
+    h2 На хоризонта - какво идва след ES2019
+
+  section
+    h3 Stage 3
+
+  section
+    h3
+      a(href="https://github.com/tc39/proposal-dynamic-import" target="_blank")
+        code proposal-dynamic-import
+    pre.fragment
+      code
+        | import(`./language-packs/${navigator.language}.js`)
+
+    pre.fragment
+      code
+        | <a href="books.html" data-entry-module="books">Books</a>
+        | <a href="movies.html" data-entry-module="movies">Movies</a>
+        |
+        | // on link click
+        | import(`./section-modules/${link.dataset.entryModule}.js`)
+        |   .then(module => {
+        |     module.loadPageInto(main);
+        |   })
+
+    aside.notes
+      blockquote It returns a promise for the module namespace object of the requested module, which is created after fetching, instantiating, and evaluating all of the module's dependencies, as well as the module itself.
+
+  section
+    h3
+      a(href="https://github.com/tc39/proposal-bigint" target="_blank")
+        code proposal-bigint
+    ul
+      li.fragment Нов примитивен тип за репрезентация на числа над 2^53
+      li.fragment Литерал:&nbsp
+        code 9007199254740991n
+    pre.fragment
+      code
+        | const theBiggestInt = 9007199254740991n;
+        | const alsoHuge = BigInt(9007199254740991); // 9007199254740991n
+        | const hugeButString = BigInt('9007199254740991'); // ↪ 9007199254740991n
+    p.fragment.small.green Достъпно във Chromium и Chrome
+
+  section
+    h3 Stage 2
+
+  section
+    h3
+      a(href="https://github.com/tc39/proposal-decorators" target="_blank")
+        code proposal-decorators
+    p.fragment Native @decorators
+    p.fragment Има polyfill за babel
+
+  section
+    h3
+      a(href="https://github.com/tc39/proposal-temporal" target="_blank")
+        code proposal-temporal
+    p.fragment Нов стандартен модул за работа с часове и дати
+    pre.fragment
+      code
+        | let dateTimeInChicago = new CivilDateTime(2000, 12, 31, 23, 59)
+        |
+        | let instantInChicago =
+        |     dateTimeInChicago.withZone('America/Chicago');
+        |
+        | let instantInSydney =
+        |     new ZonedInstant(instantInChicago.instant, 'Australia/Sydney')
+        |
+        | let dateTimeInSydney = instantInSydney.toCivilDateTime()
+        |
+        | dateTimeInChicago.toString() // 2000-12-31T23:59:00.000000000
+        | dateTimeInSydney.toString()  // 2001-01-01T16:59:00.000000000
+    p.fragment Има polyfill за babel
+
+  section
+    h2 Kакво и как да ползваме?
+
+  section
+    p ECMAScript 2015 (ES6) се поддържа от всички браузъри без Internet Explorer
+    ul
+      li.small
+        | (May 19, 2017)&nbsp;
+        a(Href="https://medium.freecodecamp.org/you-might-not-need-to-transpile-your-javascript-4d5e0a438ca" target="_blank")
+          | You might not need to transpile your javascript
+      li.small IE вече не се поддържа. Но ще получава Security Updates до 2025
+      li.small (Според статията) през 2017-та IE има 3.24% пазарен дял
+
+  section
+    p ECMAScript 2017 е покрит от всички модерни браузъри
+    p.fragment.small Не броя IE за модерен браузър
+
+  section
+    h3 MVPs
+    ul
+      li
+        a(href="http://kangax.github.io/compat-table/es2016plus/" target="_blank") kangax.github.io/compat-table
+      li
+        a(href='https://caniuse.com' target="_blank") caniuse.com
+
+  section
+    h3 babel
+    p.fragment
+      span.red @babel/preset-es2016
+      br
+      span.red @babel/preset-es2017
+    p.fragment
+      span.red babel-preset-next
+    p.fragment
+      span.red @babel/preset-stage-0
+      br
+      span.red @babel/preset-stage-3
+
+  section
+    h3 babel + core-js
+    p.fragment
+      a(href="https://babeljs.io/docs/en/babel-preset-env" target="_blank") @babel/preset-env
+      ul.fragment
+        li.small
+          code "targets": "> 0.25%, not dead"
+          | &nbsp (
+          a(href="https://github.com/browserslist/browserslist#queries" target="_blank") browserlist spec
+          | )
+        li.small
+          code "useBuiltIns": "usage" | "entry" // core-js
+    p.fragment
+      span.green @babel/plugin-transform-dotall-regex
+
+
+  section
+    h3 babel
+    pre
+      code
+        | {
+        |   "transform-es2015-modules-commonjs",
+        |   "transform-es2017-object-entries",
+        |   "transform-object-rest-spread",
+        |   "transform-es2015-destructuring",
+        | }
+    pre
+      code
+        | { "@babel/preset-env" }
+
+
+  section
+    h2 Заключение
+    p струва ли си?
+
+  section
+    h2 Q&A
