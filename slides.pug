@@ -3,8 +3,13 @@
     h2 ECMAScript
       br
       | Releases Explained
-    em ES8, ES9 и поглед напред
-    p.fragment
+    em
+      span.fragment.highlight-red(data-fragment-index="2") ES8,
+      | &nbsp;ES9
+      span.fragment.blue(data-fragment-index="3") ,&nbsp;ES10
+      br
+      | и поглед напред
+    p.fragment(data-fragment-index="1")
       em ... и назад
 
   section(data-fullscreen data-transition="slide-in fade-out")
@@ -234,17 +239,14 @@
     p.fragment ES6 e преименуван на ECMAScript 2015
 
   section
-    p ECMAScript 2016 (ES7)
-    p ECMAScript 2017 (
-      span.fragment.highlight-blue ES8
-      | )
-    p ECMAScript 2018 (
-      span.fragment.highlight-blue ES9
-      | )
+    p ECMAScript 2016
+    p.fragment.highlight-blue ECMAScript 2017
+    p.fragment.highlight-blue ECMAScript 2018
+    p.fragment.highlight-blue ECMAScript 2019
 
   section
     h2 ECMAScript 2017
-    h3.fragment.blue ES8
+    h4.fragment.blue ECMA-262, 8th edition
 
   section
     h3 String padding (
@@ -557,7 +559,7 @@
     pre.fragment
       code
         | for await (item of asyncFunction()) {
-        |   console.log(line);
+        |   console.log(item);
         | }
     p.fragment Async generator functions
     pre.fragment
@@ -645,6 +647,9 @@
         a(href="https://github.com/tc39/tc39-notes" target="_blank") Meeting Minutes
 
   section
+    img(data-src="assets/twitter-es2019.jpeg" style="height: 600px")
+
+  section
     h2 ECMAScript 2019
 
   section
@@ -729,7 +734,7 @@
     h3
       code Array.prototype.flat
     h4
-      a(href="https://developers.google.com/web/updates/2018/03/smooshgate" target="_blank") Smooshgate
+      a(href="https://developers.google.com/web/updates/2018/03/smooshgate" target="_blank") #SmooshGate
     ul
       li.fragment
         code Array.prototype.flat
@@ -837,6 +842,8 @@
     h3 MVPs
     ul
       li
+        a(href="http://2ality.com" target="_blank") 2ality.com - Dr. Axel Rauschmayer
+      li
         a(href="http://kangax.github.io/compat-table/es2016plus/" target="_blank") kangax.github.io/compat-table
       li
         a(href='https://caniuse.com' target="_blank") caniuse.com
@@ -869,9 +876,11 @@
     p.fragment
       span.green @babel/plugin-transform-dotall-regex
 
+  section
+    img(data-src="assets/twitter-babel-preset-env.jpg")
 
   section
-    h3 babel
+    h3 pls no
     pre
       code
         | {
@@ -880,14 +889,14 @@
         |   "transform-object-rest-spread",
         |   "transform-es2015-destructuring",
         | }
-    pre
-      code
-        | { "@babel/preset-env" }
-
 
   section
     h2 Заключение
-    p струва ли си?
+    p Струваше ли си времето и какво смятам да правя занапред?
 
   section
     h2 Q&A
+
+  section
+    h2
+      a(href="https://github.com/GeorgeSG/ecmascript-explained-2019/blob/master/SOURCES.md" target="_blank") Sources

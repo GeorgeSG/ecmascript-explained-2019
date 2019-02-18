@@ -13,8 +13,8 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h2>ECMAScript<br>Releases Explained</h2><em>ES8, ES9 и поглед напред</em>
-          <p class="fragment"><em>... и назад</em></p>
+          <h2>ECMAScript<br>Releases Explained</h2><em><span class="fragment highlight-red" data-fragment-index="2">ES8,</span>&nbsp;ES9<span class="fragment blue" data-fragment-index="3">,&nbsp;ES10</span><br>и поглед напред</em>
+          <p class="fragment" data-fragment-index="1"><em>... и назад</em></p>
         </section>
         <section data-fullscreen data-transition="slide-in fade-out">
           <h2>#КОЙ</h2>
@@ -214,13 +214,14 @@
           <p class="fragment">ES6 e преименуван на ECMAScript 2015</p>
         </section>
         <section>
-          <p>ECMAScript 2016 (ES7)</p>
-          <p>ECMAScript 2017 (<span class="fragment highlight-blue">ES8</span>)</p>
-          <p>ECMAScript 2018 (<span class="fragment highlight-blue">ES9</span>)</p>
+          <p>ECMAScript 2016</p>
+          <p class="fragment highlight-blue">ECMAScript 2017</p>
+          <p class="fragment highlight-blue">ECMAScript 2018</p>
+          <p class="fragment highlight-blue">ECMAScript 2019</p>
         </section>
         <section>
           <h2>ECMAScript 2017</h2>
-          <h3 class="fragment blue">ES8</h3>
+          <h4 class="fragment blue">ECMA-262, 8th edition</h4>
         </section>
         <section>
           <h3>String padding (<code>padStart</code>&nbsp;и&nbsp;<code>padEnd</code>)</h3>
@@ -455,7 +456,7 @@ const data = {...DEFAULTS, ...partialData};</code></pre>
         <section>
           <h3>Asynchronous Iteration</h3><code>for-await-of</code>
           <pre class="fragment"><code>for await (item of asyncFunction()) {
-  console.log(line);
+  console.log(item);
 }</code></pre>
           <p class="fragment">Async generator functions</p>
           <pre class="fragment"><code>async function* readLines(path) {
@@ -537,6 +538,7 @@ const data = {...DEFAULTS, ...partialData};</code></pre>
             <li><a href="https://github.com/tc39/tc39-notes" target="_blank">Meeting Minutes</a></li>
           </ul>
         </section>
+        <section><img data-src="assets/twitter-es2019.jpeg" style="height: 600px"></section>
         <section>
           <h2>ECMAScript 2019</h2>
         </section>
@@ -597,7 +599,7 @@ array.flat(Infinity); // [1, 2, 3]</code></pre>
         </section>
         <section data-fullscreen>
           <h3><code>Array.prototype.flat</code></h3>
-          <h4><a href="https://developers.google.com/web/updates/2018/03/smooshgate" target="_blank">Smooshgate</a></h4>
+          <h4><a href="https://developers.google.com/web/updates/2018/03/smooshgate" target="_blank">#SmooshGate</a></h4>
           <ul>
             <li class="fragment"><code>Array.prototype.flat</code>&nbsp;e трябвало да се казва&nbsp;<code>flatten</code></li>
             <li class="fragment">MooTools дефинира&nbsp;<code>Array.prototype.flatten</code></li>
@@ -680,6 +682,7 @@ dateTimeInSydney.toString()  // 2001-01-01T16:59:00.000000000</code></pre>
         <section>
           <h3>MVPs</h3>
           <ul>
+            <li><a href="http://2ality.com" target="_blank">2ality.com - Dr. Axel Rauschmayer</a></li>
             <li><a href="http://kangax.github.io/compat-table/es2016plus/" target="_blank">kangax.github.io/compat-table</a></li>
             <li><a href="https://caniuse.com" target="_blank">caniuse.com</a></li>
           </ul>
@@ -700,22 +703,25 @@ dateTimeInSydney.toString()  // 2001-01-01T16:59:00.000000000</code></pre>
           </p>
           <p class="fragment"><span class="green">@babel/plugin-transform-dotall-regex</span></p>
         </section>
+        <section><img data-src="assets/twitter-babel-preset-env.jpg"></section>
         <section>
-          <h3>babel</h3>
+          <h3>pls no</h3>
           <pre><code>{
   "transform-es2015-modules-commonjs",
   "transform-es2017-object-entries",
   "transform-object-rest-spread",
   "transform-es2015-destructuring",
 }</code></pre>
-          <pre><code>{ "@babel/preset-env" }</code></pre>
         </section>
         <section>
           <h2>Заключение</h2>
-          <p>струва ли си?</p>
+          <p>Струваше ли си времето и какво смятам да правя занапред?</p>
         </section>
         <section>
           <h2>Q&A</h2>
+        </section>
+        <section>
+          <h2><a href="https://github.com/GeorgeSG/ecmascript-explained-2019/blob/master/SOURCES.md" target="_blank">Sources</a></h2>
         </section>
       </div>
     </div>

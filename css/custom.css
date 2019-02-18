@@ -67,9 +67,8 @@
 }
 
 .red,
-h3.red,
 .reveal .slides section .fragment.highlight-red.visible {
-  color: #dc322f;
+  color: #dc322f !important;
 }
 
 .magenta {
@@ -81,9 +80,8 @@ h3.red,
 }
 
 .blue,
-h3.blue,
 .reveal .slides section .fragment.highlight-blue.visible {
-  color: #268bd2;
+  color: #268bd2 !important;
 }
 
 .cyan {

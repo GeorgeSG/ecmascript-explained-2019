@@ -24,7 +24,7 @@
 
 ## Features and how to use them
 
-- [ES Compatibility Tables by Juriy "kangax" Zaytsev/](http://kangax.github.io/compat-table/es2016plus/)
+- [ES Compatibility Tables by Juriy "kangax" Zaytsev](http://kangax.github.io/compat-table/es2016plus/)
 - [ES8 was released and here are its main new features](https://hackernoon.com/es8-was-released-and-here-are-its-main-new-features-ee9c394adf66)
 - [ES2018: Javascript's new features in 2018](https://medium.freecodecamp.org/es9-javascripts-state-of-art-in-2018-9a350643f29c)
 - [2ality.com - ES2018: asynchronous iteration](http://2ality.com/2016/10/asynchronous-iteration.html)
@@ -37,5 +37,5 @@
 - [#SmooshGate FAQ](https://developers.google.com/web/updates/2018/03/smooshgate)
 
 ## Future
-[TC39 ECMAScript Proposals @ GitHub](https://github.com/tc39/proposals)
-[Babel progress on ECMAScript proposals](https://github.com/babel/proposals)
+- [TC39 ECMAScript Proposals @ GitHub](https://github.com/tc39/proposals)
+- [Babel progress on ECMAScript proposals](https://github.com/babel/proposals)
