@@ -13,8 +13,8 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h2>ECMAScript<br>Releases Explained</h2><em><span class="fragment highlight-red" data-fragment-index="2">ES8,</span>&nbsp;ES9<span class="fragment blue" data-fragment-index="3">,&nbsp;ES10</span><br>и поглед напред</em>
-          <p class="fragment" data-fragment-index="1"><em>... и назад</em></p>
+          <h2>ECMAScript<br>Releases Explained</h2><em>ES8, ES9<span class="fragment blue" data-fragment-index="2">,&nbsp;ES10</span><br>и поглед напред</em>
+          <p class="fragment" data-fragment-index="1"><em class="blue">... и назад</em></p>
         </section>
         <section data-fullscreen data-transition="slide-in fade-out">
           <h2>#КОЙ</h2>
@@ -29,10 +29,11 @@
           </div>
         </section>
         <section data-fullscreen data-background-image="assets/leanplum-background.svg" data-background-position="300px -800px" data-transition="fade" data-transition-speed="fast" data-background-color="rgb(242, 241, 243)"><img class="leanplum-logo" data-src="assets/leanplum-logo.svg">
-          <p class="fragment leanplum-technologies"><img class="logo padded" data-src="assets/vuejs.jpg" style="width: 100px"><img class="logo padded" data-src="assets/ts.png" style="width: 100px"><br><img class="fragment logo padded" data-src="assets/java.png" style="width: 100px"><img class="fragment logo padded" data-src="assets/python.svg" style="width: 100px"></p>
+          <p class="fragment leanplum-technologies"><img class="logo padded" data-src="assets/vuejs.jpg" style="height: 150px; width: 150px"><img class="logo padded" data-src="assets/ts.png" style="height: 150px; width: 150px"><br><img class="fragment logo padded" data-src="assets/java.png" style="height: 150px; width: 150px"><img class="fragment logo padded" data-src="assets/python.svg" style="height: 150px; width: 150px"></p>
         </section>
-        <section data-fullscreen data-transition="fade-in slide-out"><img class="logo padded" data-src="assets/vmware.jpg"><img class="logo padded" data-src="assets/musala-soft.jpg"></section>
-        <section>Защо говоря за ECMAScript?
+        <section data-fullscreen data-transition="fade-in slide-out"><img class="logo padded" data-src="assets/vmware.jpg" style="height: 150px"><img class="logo padded" data-src="assets/musala-soft.jpg" style="height: 150px"></section>
+        <section>
+          <h2>Защо говоря за ECMAScript?</h2>
           <aside class="notes">- поглед на страничен наблюдател</aside>
         </section>
         <section>Често виждах това:
@@ -427,15 +428,16 @@
           <div class="codewrapper"><img data-src="assets/code/array-flat.png" style="height: 86px"></div>
           <div class="codewrapper"><img data-src="assets/code/array-flatmap.png" style="height: 32px"></div>
         </section>
-        <section data-fullscreen>
+        <section>
           <h3><code class="inline">Array.prototype.flat</code></h3>
           <h4><a href="https://developers.google.com/web/updates/2018/03/smooshgate" target="_blank">#SmooshGate</a></h4>
           <ul>
             <li class="fragment"><code class="inline">Array.prototype.flat</code>&nbsp;e трябвало да се казва&nbsp;<code class="inline">flatten</code></li>
+            <li class="fragment">... и в Firefox Nightly версия сме счупили половината интернет</li>
             <li class="fragment">MooTools дефинира&nbsp;<code class="inline">Array.prototype.flatten</code></li>
-            <li class="fragment">... и в експериментална версия сме счупили половината интернет</li>
           </ul>
         </section>
+        <section data-background-image="assets/spacejam.png" data-background-color="#000" data-background-size="contain"></section>
         <section>и други...</section>
         <section data-background-image="assets/the-future-is-here.jpg" data-background-color="#000" data-background-size="contain"></section>
         <section>
@@ -515,6 +517,7 @@
               <li class="small"><code class="inline">"useBuiltIns": "usage" | "entry" // core-js</code></li>
             </ul>
           </p>
+          <p class="fragment"><span class="green">@babel/polyfill</span></p>
           <p class="fragment"><span class="green">@babel/plugin-transform-dotall-regex</span></p>
         </section>
         <section><img data-src="assets/twitter-babel-preset-env.jpg"></section>
@@ -524,7 +527,11 @@
         </section>
         <section>
           <h2>Заключение</h2>
-          <p>Струваше ли си времето и какво смятам да правя занапред?</p>
+          <ul>
+            <li class="fragment small">Историята на ECMAScript е интересна и обяснява доста неща</li>
+            <li class="fragment small">В началото на всяка година може да видите кои предложения ще са част от следващата версия на стандарта (Stage 4)</li>
+            <li class="fragment small">Любопитно е да се разглеждат и предложенията, които са в Stage 1-3</li>
+          </ul>
         </section>
         <section>
           <h2>Q&A</h2>

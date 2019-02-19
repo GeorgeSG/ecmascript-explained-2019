@@ -4,13 +4,12 @@
       br
       | Releases Explained
     em
-      span.fragment.highlight-red(data-fragment-index="2") ES8,
-      | &nbsp;ES9
-      span.fragment.blue(data-fragment-index="3") ,&nbsp;ES10
+      | ES8, ES9
+      span.fragment.blue(data-fragment-index="2") ,&nbsp;ES10
       br
       | и поглед напред
     p.fragment(data-fragment-index="1")
-      em ... и назад
+      em.blue ... и назад
 
   section(data-fullscreen data-transition="slide-in fade-out")
     h2 #КОЙ
@@ -42,17 +41,18 @@
   )
     img.leanplum-logo(data-src="assets/leanplum-logo.svg")
     p.fragment.leanplum-technologies
-      img.logo.padded(data-src="assets/vuejs.jpg" style='width: 100px')
-      img.logo.padded(data-src="assets/ts.png" style='width: 100px')
+      img.logo.padded(data-src="assets/vuejs.jpg" style='height: 150px; width: 150px')
+      img.logo.padded(data-src="assets/ts.png" style='height: 150px; width: 150px')
       br
-      img.fragment.logo.padded(data-src="assets/java.png" style='width: 100px')
-      img.fragment.logo.padded(data-src="assets/python.svg" style='width: 100px')
+      img.fragment.logo.padded(data-src="assets/java.png" style='height: 150px; width: 150px')
+      img.fragment.logo.padded(data-src="assets/python.svg" style='height: 150px; width: 150px')
 
   section(data-fullscreen data-transition="fade-in slide-out")
-    img.logo.padded(data-src="assets/vmware.jpg")
-    img.logo.padded(data-src="assets/musala-soft.jpg")
+    img.logo.padded(data-src="assets/vmware.jpg" style="height: 150px")
+    img.logo.padded(data-src="assets/musala-soft.jpg" style="height: 150px")
 
-  section Защо говоря за ECMAScript?
+  section
+    h2 Защо говоря за ECMAScript?
 
     aside.notes
       | - поглед на страничен наблюдател
@@ -807,7 +807,7 @@
     //- pre
     //-   code [2, 3, 4].flatMap((x) => [x, x * 2]); // [2, 4, 3, 6, 4, 8]
 
-  section(data-fullscreen)
+  section
     h3
       code.inline Array.prototype.flat
     h4
@@ -817,9 +817,11 @@
         code.inline Array.prototype.flat
         | &nbsp;e трябвало да се казва&nbsp;
         code.inline flatten
+      li.fragment ... и в Firefox Nightly версия сме счупили половината интернет
       li.fragment MooTools дефинира&nbsp;
         code.inline Array.prototype.flatten
-      li.fragment ... и в експериментална версия сме счупили половината интернет
+
+  section(data-background-image="assets/spacejam.png" data-background-color="#000" data-background-size="contain")
 
   section
     | и други...
@@ -966,6 +968,8 @@
         li.small
           code.inline "useBuiltIns": "usage" | "entry" // core-js
     p.fragment
+      span.green @babel/polyfill
+    p.fragment
       span.green @babel/plugin-transform-dotall-regex
 
   section
@@ -986,7 +990,11 @@
 
   section
     h2 Заключение
-    p Струваше ли си времето и какво смятам да правя занапред?
+    ul
+      li.fragment.small Историята на ECMAScript е интересна и обяснява доста неща
+      li.fragment.small В началото на всяка година може да видите кои предложения ще са част от следващата версия на стандарта (Stage 4)
+      li.fragment.small Любопитно е да се разглеждат и предложенията, които са в Stage 1-3
+
 
   section
     h2 Q&A
