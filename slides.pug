@@ -58,23 +58,27 @@
       | - поглед на страничен наблюдател
 
   section Често виждах това:
-    pre
-      code
-        | {
-        |   ...,
-        |   "babel": {
-        |     "presets": ["es2015", "react", "stage-2"]
-        |   },
-        |   ...,
-        | }
-    pre.fragment
-      code
-        | {
-        |   "transform-es2015-modules-commonjs",
-        |   "transform-es2017-object-entries",
-        |   "transform-object-rest-spread",
-        |   "transform-es2015-destructuring",
-        | }
+    .codewrapper
+      img(data-src="assets/code/babel-presets-1.png" style="height: 214px")
+    .codewrapper.fragment
+      img(data-src="assets/code/babel-presets-2.png" style="height: 177px")
+    //- pre
+    //-   code
+    //-     | {
+    //-     |   ...,
+    //-     |   "babel": {
+    //-     |     "presets": ["es2015", "react", "stage-2"]
+    //-     |   },
+    //-     |   ...,
+    //-     | }
+    //- pre.fragment
+    //-   code
+    //-     | {
+    //-     |   "transform-es2015-modules-commonjs",
+    //-     |   "transform-es2017-object-entries",
+    //-     |   "transform-object-rest-spread",
+    //-     |   "transform-es2015-destructuring",
+    //-     | }
 
   section
     p ... и исках да разбера&nbsp;
@@ -114,10 +118,8 @@
       li TypeScript
       li ActionScript
       li JScript
-    aside.notes
-      ul
-        li V8 - engine
-        li Node.js - framework
+      li.fragment V8 engine
+      li.fragment Node.JS
 
   section
     h2
@@ -203,7 +205,7 @@
           a(href="https://www.adaptivepath.com/ideas/ajax-new-approach-web-applications/" target="_blank") Ajax
       tr.fragment
         td.right.strong 2005
-        td Brendan Eich и Mozilla се присъединяват към Ecma. ECMAScript 4 reboot
+        td Brendan Eich и Mozilla @ Ecma. ECMAScript 4 reboot
       tr.fragment
         td(colspan="2") Yahoo & Microsoft създават ECMAScript 3.1
 
@@ -245,81 +247,96 @@
       | &nbsp;и&nbsp;
       code.inline padEnd
       | )
-    pre.fragment
-      code
-        | str.padStart(targetLength [, padString])
-        | str.padEnd(targetLength [, padString])
-    pre.fragment
-      code
-        | "dev.bg".padStart(1);             // "dev.bg"
-        | "dev.bg".padStart(8);             // "  dev.bg"
-        | "dev.bg".padStart(10, "test");    // "testdev.bg"
-        | "dev.bg".padStart(14, "test");    // "testtestdev.bg"
-        |
-        | "loading".padEnd(10, ".");        // "loading..."
+    .codewrapper.fragment
+      img(data-src="assets/code/padstart-1.png" style="height: 65px")
+    .codewrapper.fragment
+      img(data-src="assets/code/padstart-2.png" style="height: 153px")
+    //- pre.fragment
+    //-   code
+    //-     | str.padStart(targetLength [, padString])
+    //-     | str.padEnd(targetLength [, padString])
+    //- pre.fragment
+    //-   code
+    //-     | "dev.bg".padStart(1);             // "dev.bg"
+    //-     | "dev.bg".padStart(8);             // "  dev.bg"
+    //-     | "dev.bg".padStart(10, "test");    // "testdev.bg"
+    //-     | "dev.bg".padStart(14, "test");    // "testtestdev.bg"
+    //-     |
+    //-     | "loading".padEnd(10, ".");        // "loading..."
     p.fragment.small.green Достъпно във всички модерни браузъри
 
   section
     h3
       code.inline Object.values()
-    pre.fragment
-      code
-        | const countries = {
-        |   BR: "Brazil",
-        |   DE: "Germany",
-        |   BG: "Bulgaria",
-        |   US: "United States of America"
-        | };
-        | Object.values(countries);
-    pre.fragment
-      code ["Brazil", "Germany", "Bulgaria", "United States of America"]
+    .codewrapper.fragment
+      img(data-src="assets/code/object-values.png" style="height: 235px")
+    .codewrapper.fragment
+      img(data-src="assets/code/object-values-2.png" style="height: 39px")
+    //- pre.fragment
+    //-   code
+    //-     | const countries = {
+    //-     |   BR: "Brazil",
+    //-     |   DE: "Germany",
+    //-     |   BG: "Bulgaria",
+    //-     |   US: "United States of America"
+    //-     | };
+    //-     | Object.values(countries);
+    //- pre.fragment
+    //-   code ["Brazil", "Germany", "Bulgaria", "United States of America"]
     p.fragment.small.green Достъпно във всички модерни браузъри
 
   section
     h3
       code.inline Object.entries()
-    pre.fragment
-      code
-        | const countries = {
-        |   BR: "Brazil",
-        |   DE: "Germany",
-        |   BG: "Bulgaria",
-        |   US: "United States of America"
-        | };
-        | Object.entries(countries);
-    pre.fragment
-      code
-        | [["BR", "Brazil"], ["DE", "Germany"],
-        | ["BG", "Bulgaria"], ["US","United States of America"]]
+    .codewrapper.fragment
+      img(data-src="assets/code/object-entries.png" style="height: 230px")
+    .codewrapper.fragment
+      img(data-src="assets/code/object-entries-2.png" style="height: 61px")
+    //- pre.fragment
+    //-   code
+    //-     | const countries = {
+    //-     |   BR: "Brazil",
+    //-     |   DE: "Germany",
+    //-     |   BG: "Bulgaria",
+    //-     |   US: "United States of America"
+    //-     | };
+    //-     | Object.entries(countries);
+    //- pre.fragment
+    //-   code
+    //-     | [["BR", "Brazil"], ["DE", "Germany"],
+    //-     | ["BG", "Bulgaria"], ["US","United States of America"]]
     p.fragment.small.green Достъпно във всички модерни браузъри
 
   section
     h4
       code.inline Object.getOwnPropertyDescriptors()
-    pre.fragment
-      code
-        | const randomObject = {
-        |   name: "Georgi",
-        |   get answer() { return 42; }
-        | };
-        | Object.getOwnPropertyDescriptors(randomObject);
-    pre.fragment
-      code
-        | {
-        |   "name": {
-        |      "value": "Georgi",
-        |      "writable":true,
-        |      "enumerable":true,
-        |      "configurable":true
-        |   },
-        |   "answer":{
-        |      "enumerable":true,
-        |      "configurable":true,
-        |      "get": function foo()
-        |      "set": undefined
-        |   }
-        | }
-    p.fragment.small.green Достъпно във всички модерни браузъри
+    .codewrapper.fragment
+      img(data-src="assets/code/object-getownpropertydescriptors.png" style="height: 142px")
+    .codewrapper.fragment
+      img(data-src="assets/code/object-getownpropertydescriptors-2.png" style="height: 411px")
+    //- pre.fragment
+    //-   code
+    //-     | const randomObject = {
+    //-     |   name: "Georgi",
+    //-     |   get answer() { return 42; }
+    //-     | };
+    //-     | Object.getOwnPropertyDescriptors(randomObject);
+    //- pre.fragment
+    //-   code
+    //-     | {
+    //-     |   "name": {
+    //-     |      "value": "Georgi",
+    //-     |      "writable": true,
+    //-     |      "enumerable": true,
+    //-     |      "configurable": true
+    //-     |   },
+    //-     |   "answer": {
+    //-     |      "enumerable": true,
+    //-     |      "configurable": true,
+    //-     |      "get": function foo()
+    //-     |      "set": undefined
+    //-     |   }
+    //-     | }
 
     aside.notes
       ul
@@ -327,81 +344,103 @@
         li configurable - дали конфигурацията може да се променя
 
   section
+    h4
+      code.inline Object.getOwnPropertyDescriptors()
+      p.small.green Достъпно във всички модерни браузъри
+
+  section
     h3 Запетая след последен параметър на функция
-    pre.fragment
-      code
-        | function myFunc(var1, var2, var3,) {
-        |  // ...
-        | }
-    pre.fragment
-      code myFunc(10, 20, 30,);
-    pre.fragment
-      code
-        | myFunc(
-        |   10,
-        |   20,
-        |   30,
-        | );
+    .codewrapper.fragment
+      img(data-src="assets/code/trailing-comma.png" style="height: 91px")
+    .codewrapper.fragment
+      img(data-src="assets/code/trailing-comma-2.png" style="height: 35px")
+    .codewrapper.fragment
+      img(data-src="assets/code/trailing-comma-3.png" style="height: 142px")
+    //- pre.fragment
+    //-   code
+    //-     | function myFunc(var1, var2, var3,) {
+    //-     |  // ...
+    //-     | }
+    //- pre.fragment
+    //-   code myFunc(10, 20, 30,);
+    //- pre.fragment
+    //-   code
+    //-     | myFunc(
+    //-     |   10,
+    //-     |   20,
+    //-     |   30,
+    //-     | );
     p.fragment.small.green Достъпно във всички модерни браузъри
 
   section
     h3 Shared memory and atomics
     p
       code.inline SharedArrayBuffer
-      pre
-        code
-          | // main.js
-          | const worker = new Worker('worker.js');
-          |
-          | // To be shared
-          | const sharedBuffer = new SharedArrayBuffer(
-          |     10 * Int32Array.BYTES_PER_ELEMENT);
-          |
-          | // Share sharedBuffer with the worker
-          | worker.postMessage({sharedBuffer});
-      pre
-        code
-          | // worker.js
-          | self.addEventListener('message', function (event) {
-          |     const {sharedBuffer} = event.data;
-          |     const sharedArray = new Int32Array(sharedBuffer);
-          | });
+    .codewrapper.fragment
+      img(data-src="assets/code/sharedarraybuffer.png" style="height: 242px")
+    .codewrapper.fragment
+      img(data-src="assets/code/sharedarraybuffer-2.png" style="height: 151px")
+    //- pre
+    //-   code
+    //-     | // main.js
+    //-     | const worker = new Worker('worker.js');
+    //-     |
+    //-     | // To be shared
+    //-     | const sharedBuffer = new SharedArrayBuffer(
+    //-     |     10 * Int32Array.BYTES_PER_ELEMENT);
+    //-     |
+    //-     | // Share sharedBuffer with the worker
+    //-     | worker.postMessage({sharedBuffer});
+    //- pre
+    //-   code
+    //-     | // worker.js
+    //-     | self.addEventListener('message', function (event) {
+    //-     |     const { sharedBuffer } = event.data;
+    //-     |     const sharedArray = new Int32Array(sharedBuffer);
+    //-     | });
   section
     h3 Shared memory and atomics
     p
       code.inline Atomics
-      pre
-        code
-          | // main.js
-          | console.log('notifying...');
-          | Atomics.store(sharedArray, 0, 123);
-          |
-          | // worker.js
-          | while (Atomics.load(sharedArray, 0) !== 123);
-          | console.log('notified');
-      pre
-        code
-          | Atomics.wait(ta: Int32Array, index, value, timeout)
-          | Atomics.wake(ta: Int32Array, index, count)
+    .codewrapper.fragment
+      img(data-src="assets/code/atomics.png" style="height: 211px")
+    .codewrapper.fragment
+      img(data-src="assets/code/atomics-2.png" style="height: 64px")
+    //- pre
+    //-   code
+    //-     | // main.js
+    //-     | console.log('notifying...');
+    //-     | Atomics.store(sharedArray, 0, 123);
+    //-     |
+    //-     | // worker.js
+    //-     | while (Atomics.load(sharedArray, 0) !== 123);
+    //-     | console.log('notified');
+    //- pre
+    //-   code
+    //-     | Atomics.wait(ta: Int32Array, index, value, timeout);
+    //-     | Atomics.wake(ta: Int32Array, index, count);
+
   section
     h3
       code.inline async
       | &nbsp;/&nbsp;
       code.inline await
-    pre.fragment
-      code
-        | function loadContentFromServer() {
-        |   return new Promise((resolve, reject) => {
-        |     setTimeout(() => {
-        |       resolve('success');
-        |     }, 1000);
-        |   });
-        | }
-        |
-        | async function getContent() {
-        |   const result = await loadContentFromServer();
-        |   console.log(result);
-        | }
+    .codewrapper.fragment
+      img(data-src="assets/code/async-await.png" style="height: 351px")
+    //- pre.fragment
+    //-   code
+    //-     | function loadContentFromServer() {
+    //-     |   return new Promise((resolve, reject) => {
+    //-     |     setTimeout(() => {
+    //-     |       resolve('success');
+    //-     |     }, 1000);
+    //-     |   });
+    //-     | }
+    //-     |
+    //-     | async function getContent() {
+    //-     |   const result = await loadContentFromServer();
+    //-     |   console.log(result);
+    //-     | }
 
     p.fragment
       code await
@@ -421,26 +460,33 @@
   section
     h3 Look behind
     p Positive (
-      code.inline ?<=#...
+      code.inline ?<=
       | )
-    pre
-      code
-        | "$foo #foo @foo".replace(/(?<=#)foo/g, 'XXX')
-        | "$foo #XXX @foo"
+    .codewrapper.fragment
+      img(data-src="assets/code/lookbehind-positive.png" style="height: 62px")
+    //- pre
+    //-   code
+    //-     | "$foo #foo @foo".replace(/(?<=#)foo/g, 'XXX');
+    //-     | "$foo #XXX @foo"
     p Negative (
-      code.inline #{'?<!#...'}
+      code.inline #{'?<!'}
       | )
-    pre
-      code
-        | "$foo #foo @foo".replace(/(#{'?<!#'})foo/g, 'XXX')
-        | "$XXX #foo @XXX"
+    .codewrapper.fragment
+      img(data-src="assets/code/lookbehind-negative.png" style="height: 57px")
+    //- pre
+    //-   code
+    //-     | "$foo #foo @foo".replace(/(#{'?<!#'})foo/g, 'XXX');
+    //-     | "$XXX #foo @XXX"
+    p.fragment.red
+      | Няма polyfill
 
   section
     h3 Unicode Escapes
-    pre
-      code \p{UnicodePropertyName=UnicodePropertyValue}
-    pre
-      code /\p{Script=Greek}/u.test('μ') // true
+    code.inline \p{UnicodePropertyName=UnicodePropertyValue}
+    .codewrapper
+      img(data-src="assets/code/unicode-escapes.png" style="height: 36px")
+    //- pre
+    //-   code /\p{Script=Greek}/u.test('μ') // true
 
   section
     h3 Named Capture Groups
@@ -448,31 +494,37 @@
         code.inline #{"?<name>"}
         | )
     p.fragment преди
-    pre.fragment
-      code
-        | const r = /([0-9]{4})-([0-9]{2})-([0-9]{2})/;
-        | const results = r.exec('2018-07-12');
-        | console.log(results[1]); // 2018
-        | console.log(results[2]); // 07
-        | console.log(results[3]); // 12
+    .codewrapper.fragment
+      img(data-src="assets/code/regex-groups-before.png" style="height: 144px")
+    //- pre.fragment
+    //-   code
+    //-     | const r = /([0-9]{4})-([0-9]{2})-([0-9]{2})/;
+    //-     | const results = r.exec('2018-07-12');
+    //-     | console.log(results[1]); // 2018
+    //-     | console.log(results[2]); // 07
+    //-     | console.log(results[3]); // 12
     p.fragment сега
-    pre.fragment
-      code
-        | const r = #{"/(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/;"}
-        | const results = r.exec('2018-07-12');
-        | console.log(results.groups.year);  // 2018
-        | console.log(results.groups.month); // 07
-        | console.log(results.groups.day);   // 12
+    .codewrapper.fragment
+      img(data-src="assets/code/regex-groups-after.png" style="height: 145px")
+    //- pre.fragment
+    //-   code
+    //-     | const r = #{"/(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/;"}
+    //-     | const results = r.exec('2018-07-12');
+    //-     | console.log(results.groups.year);  // 2018
+    //-     | console.log(results.groups.month); // 07
+    //-     | console.log(results.groups.day);   // 12
 
   section
     h3 \s (dotAll) Flag
     ul
       li.fragment "." match-ва line terminators
       li.fragment \s идва от singleline
-    pre.fragment
-      code
-        | /hello.world/.test('hello\nworld');  // false
-        | /hello.world/s.test('hello\nworld'); // true
+    .codewrapper.fragment
+      img(data-src="assets/code/dot-all-flag.png" style="height: 60px")
+    //- pre.fragment
+    //-   code
+    //-     | /hello.world/.test('hello\nworld');  // false
+    //-     | /hello.world/s.test('hello\nworld'); // true
 
   section
     h3.red Всички нововъедения за Regex-и
@@ -480,94 +532,110 @@
       | са достъпни само в Chrome :)
 
   section
-    h4 Rest Properties за object destructuring
-    pre.fragment
-      code
-        | let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
-        | x; // 1
-        | y; // 2
-        | z; // { a: 3, b: 4 }
-    h4 Spread Properties - object literals
-    pre.fragment
-      code
-        | let n = { x, y, ...z };
-        | n; // { x: 1, y: 2, a: 3, b: 4 }
+    h4 Rest Operator за деконструиране на обекти
+    .codewrapper.fragment
+      img(data-src="assets/code/rest-operator.png" style="height: 121px")
+    //- pre.fragment
+    //-   code
+    //-     | let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+    //-     | x; // 1
+    //-     | y; // 2
+    //-     | z; // { a: 3, b: 4 }
+    h4 Spread Operator - Object Literals
+    .codewrapper.fragment
+      img(data-src="assets/code/spread-operator.png" style="height: 65px")
+    //- pre.fragment
+    //-   code
+    //-     | let n = { x, y, ...z };
+    //-     | n; // { x: 1, y: 2, a: 3, b: 4 }
     p.fragment.small.red Не е достъпно в Edge
 
   section
-    h4 Пример: Rest/Spread Properties за попълване на дефолтни стойности
-    pre
-      code
-        | const DEFAULTS = {foo: 'a', bar: 'b'};
-        | const partialData = {foo: 1};
-        |
-        | const data = {...DEFAULTS, ...partialData};
+    h4 Пример: Spread Operator за попълване на стойности по подразбиране
+    .codewrapper
+      img(data-src="assets/code/rest-spread-example.png" style="height: 117px")
+    //- pre
+    //-   code
+    //-     | const DEFAULTS = {foo: 'a', bar: 'b'};
+    //-     | const partialData = {foo: 1};
+    //-     |
+    //-     | const data = {...DEFAULTS, ...partialData};
 
   section
     h3
       code.inline Promise.prototype.finally
     p.fragment
       em FINALLY!
-    pre.fragment
-      code
-        | function doSomething() {
-        |   doSomething1()
-        |     .then(doSomething2)
-        |     .then(doSomething3)
-        |     .catch(err => {
-        |       console.log(err);
-        |     })
-        |     .finally(() => {
-        |       // always executes.
-        |     });
-        | }
+    .codewrapper.fragment
+      img(data-src="assets/code/finally.png" style="height: 320px")
+    //- pre.fragment
+    //-   code
+    //-     | function doSomething() {
+    //-     |   doSomething1()
+    //-     |     .then(doSomething2)
+    //-     |     .then(doSomething3)
+    //-     |     .catch(err => {
+    //-     |       console.log(err);
+    //-     |     })
+    //-     |     .finally(() => {
+    //-     |       // always executes.
+    //-     |     });
+    //-     | }
     p.fragment.small.green Достъпно във всички модерни браузъри
       span.fragment.red &nbsp;(... без Edge 17)
 
   section
     h3 Asynchronous Iteration
-    pre.fragment
-      code
-        | async function process(array) {
-        |   await array.forEach(async i => {
-        |     await doSomething(i);
-        |   });
-        | }
+    .codewrapper.fragment
+      img(data-src="assets/code/async-iteration-no.png" style="height: 142px")
+    //- pre.fragment
+    //-   code
+    //-     | async function process(array) {
+    //-     |   await array.forEach(async i => {
+    //-     |     await doSomething(i);
+    //-     |   });
+    //-     | }
     p.fragment.red ▲ това не работи
     p.fragment.green ▼ това  работи
-    pre.fragment
-      code
-        | async function process(array) {
-        |   for await (let i of array) {
-        |     doSomething(i);
-        |   }
-        | }
+    .codewrapper.fragment
+      img(data-src="assets/code/async-iteration-yes.png" style="height: 141px")
+    //- pre.fragment
+    //-   code
+    //-     | async function process(array) {
+    //-     |   for await (let i of array) {
+    //-     |     doSomething(i);
+    //-     |   }
+    //-     | }
     p.fragment.small.red Не е достъпно в Edge
 
   section
     h3 Asynchronous Iteration
     code.inline for-await-of
-    pre.fragment
-      code
-        | for await (item of asyncFunction()) {
-        |   console.log(item);
-        | }
+    .codewrapper.fragment
+      img(data-src="assets/code/for-await-of.png" style="height: 87px")
+    //- pre.fragment
+    //-   code
+    //-     | for await (item of asyncFunction()) {
+    //-     |   console.log(item);
+    //-     | }
     p.fragment Async generator functions
-    pre.fragment
-      code
-        | async function* readLines(path) {
-        |   let file = await fileOpen(path);
-        |
-        |   try {
-        |     while (!file.EOF) {
-        |       yield await file.readLine();
-        |     }
-        |   } finally {
-        |     await file.close();
-        |   }
-        | }
+    .codewrapper.fragment
+      img(data-src="assets/code/for-await-of-async-generators.png" style="height: 287px")
+    //- pre.fragment
+    //-   code
+    //-     | async function* readLines(path) {
+    //-     |   let file = await fileOpen(path);
+    //-     |
+    //-     |   try {
+    //-     |     while (!file.EOF) {
+    //-     |       yield await file.readLine();
+    //-     |     }
+    //-     |   } finally {
+    //-     |     await file.close();
+    //-     |   }
+    //-     | }
 
-  section(data-background-image="assets/future.jpg" data-background-color='#000' data-background-size="contain")
+  section(data-background-image="assets/future.jpg" data-background-color="#000" data-background-size="contain")
 
   section
     img.cycle(data-src="assets/icon-cycle.png")
@@ -648,14 +716,18 @@
       code.inline Object.fromEntries()
     h4.fragment Обратното на&nbsp;
       code.inline Object.entries()
-    pre.fragment
-      code Object.fromEntries([ ['foo', 1], ['bar', 2] ]);
-    pre.fragment
-      code
-        | {
-        |   foo: 1,
-        |   bar: 2,
-        | }
+    .codewrapper.fragment
+      img(data-src="assets/code/object-fromentries.png" style="height: 35px")
+    .codewrapper.fragment
+      img(data-src="assets/code/object-fromentries-2.png" style="height: 117px")
+    //- pre.fragment
+    //-   code Object.fromEntries([['foo', 1], ['bar', 2]]);
+    //- pre.fragment
+    //-   code
+    //-     | {
+    //-     |   foo: 1,
+    //-     |   bar: 2,
+    //-     | }
     ul
       li.fragment При еднакви key-ове, последния печели
       li.fragment Ако key-ът не е string или symbol, ще бъде конвертиран към string
@@ -666,60 +738,74 @@
       code.inline _.pick()
       | &nbsp;имплементация с&nbsp;
       code.inline Object.fromEntries()
-    pre
-      code
-        | const address = {
-        |   street: "Geo Milev",
-        |   number: "14",
-        |   city: "Sofia"
-        | };
-        | pick(address, "street") // { street: "Geo Milev" }
-    pre.fragment
-      code
-        | function pick(object, ...keys) {
-        |   const filteredEntries = Object.entries(object)
-        |     .filter(([key, _value]) => keys.includes(key));
-        |   return Object.fromEntries(filteredEntries);
-        | }
+    .codewrapper.fragment
+      img(data-src="assets/code/pick-example.png" style="height: 207px")
+    .codewrapper.fragment
+      img(data-src="assets/code/pick-example-2.png" style="height: 176px")
+    //- pre
+    //-   code
+    //-     | const address = {
+    //-     |   street: "Geo Milev",
+    //-     |   number: "14",
+    //-     |   city: "Sofia"
+    //-     | };
+    //-     | pick(address, "street"); // { street: "Geo Milev" }
+    //- pre.fragment
+    //-   code
+    //-     | function pick(object, ...keys) {
+    //-     |   const filteredEntries = Object.entries(object)
+    //-     |     .filter(([key, _value]) => keys.includes(key));
+    //-     |   return Object.fromEntries(filteredEntries);
+    //-     | }
 
   section
     h3
       code.inline String.prototype.{trimStart,trimEnd}
-    pre
-      code
-        | "  abc  ".trimStart() // "abc  "
-        | "  abc  ".trimEnd()   // "  abc"
+    .codewrapper
+      img(data-src="assets/code/trimstart-trimend.png" style="height: 60px")
+    //- pre
+    //-   code
+    //-     | "  abc  ".trimStart() // "abc  "
+    //-     | "  abc  ".trimEnd()   // "  abc"
 
   section
     h3 optional catch binding
-    pre
-      code
-        | try {
-        |   ···
-        | } catch {
-        |   ···
-        | }
-    pre.fragment
-      code
-        | function isValidJSON(text) {
-        |   try {
-        |     JSON.parse(text);
-        |     return true;
-        |   } catch {
-        |     return false;
-        |   }
-        | }
+    .codewrapper
+      img(data-src="assets/code/optional-catch.png" style="height: 148px")
+    .codewrapper.fragment
+      img(data-src="assets/code/optional-catch-example.png" style="height: 231px")
+    //- pre
+    //-   code
+    //-     | try {
+    //-     |   ···
+    //-     | } catch {
+    //-     |   ···
+    //-     | }
+    //- pre.fragment
+    //-   code
+    //-     | function isValidJSON(text) {
+    //-     |   try {
+    //-     |     JSON.parse(text);
+    //-     |     return true;
+    //-     |   } catch {
+    //-     |     return false;
+    //-     |   }
+    //-     | }
 
   section
     h3
       code.inline Array.prototype.{flat,flatMap}
-    pre
-      code
-        | const array = [1, [2, [3]]];
-        | array.flat(); // [1, 2, [3]]
-        | array.flat(Infinity); // [1, 2, 3]
-    pre
-      code [2, 3, 4].flatMap((x) => [x, x * 2]); // [2, 4, 3, 6, 4, 8]
+    .codewrapper
+      img(data-src="assets/code/array-flat.png" style="height: 86px")
+    .codewrapper
+      img(data-src="assets/code/array-flatmap.png" style="height: 32px")
+    //- pre
+    //-   code
+    //-     | const array = [1, [2, [3]]];
+    //-     | array.flat(); // [1, 2, [3]]
+    //-     | array.flat(Infinity); // [1, 2, 3]
+    //- pre
+    //-   code [2, 3, 4].flatMap((x) => [x, x * 2]); // [2, 4, 3, 6, 4, 8]
 
   section(data-fullscreen)
     h3
@@ -738,6 +824,8 @@
   section
     | и други...
 
+  section(data-background-image="assets/the-future-is-here.jpg" data-background-color="#000" data-background-size="contain")
+
   section
     h2 На хоризонта - какво идва след ES2019
 
@@ -748,20 +836,23 @@
     h3
       a(href="https://github.com/tc39/proposal-dynamic-import" target="_blank")
         code.inline proposal-dynamic-import
-    pre.fragment
-      code
-        | import(`./language-packs/${navigator.language}.js`)
-
-    pre.fragment
-      code
-        | <a href="books.html" data-entry-module="books">Books</a>
-        | <a href="movies.html" data-entry-module="movies">Movies</a>
-        |
-        | // on link click
-        | import(`./section-modules/${link.dataset.entryModule}.js`)
-        |   .then(module => {
-        |     module.loadPageInto(main);
-        |   })
+    .codewrapper.fragment
+      img(data-src="assets/code/proposal-dynamic-import.png" style="height: 29px")
+    .codewrapper.fragment
+      img(data-src="assets/code/proposal-dynamic-import-example.png" style="height: 230px")
+    //- pre.fragment
+    //-   code
+    //-     | import(`./language-packs/${navigator.language}.js`)
+    //- pre.fragment
+    //-   code
+    //-     | <a href="books.html" data-entry-module="books">Books</a>
+    //-     | <a href="movies.html" data-entry-module="movies">Movies</a>
+    //-     |
+    //-     | // on link click
+    //-     | import(`./section-modules/${link.dataset.entryModule}.js`)
+    //-     |   .then(module => {
+    //-     |     module.loadPageInto(main);
+    //-     |   })
 
     aside.notes
       blockquote It returns a promise for the module namespace object of the requested module, which is created after fetching, instantiating, and evaluating all of the module's dependencies, as well as the module itself.
@@ -774,12 +865,14 @@
       li.fragment Нов примитивен тип за репрезентация на числа над 2^53
       li.fragment Литерал:&nbsp
         code 9007199254740991n
-    pre.fragment
-      code
-        | const theBiggestInt = 9007199254740991n;
-        | const alsoHuge = BigInt(9007199254740991); // 9007199254740991n
-        | const hugeButString = BigInt('9007199254740991'); // ↪ 9007199254740991n
-    p.fragment.small.green Достъпно във Chromium и Chrome
+    .codewrapper.fragment
+      img(data-src="assets/code/proposal-bigint.png" style="height: 81px")
+    //- pre.fragment
+    //-   code
+    //-     | const theBiggestInt = 9007199254740991n;
+    //-     | const alsoHuge = BigInt(9007199254740991);        // 9007199254740991n
+    //-     | const hugeButString = BigInt('9007199254740991'); // 9007199254740991n
+    p.fragment.small.green Достъпно в Chromium и Chrome
 
   section
     h3 Stage 2
@@ -796,21 +889,26 @@
       a(href="https://github.com/tc39/proposal-temporal" target="_blank")
         code.inline proposal-temporal
     p.fragment Нов стандартен модул за работа с часове и дати
-    pre.fragment
-      code
-        | let dateTimeInChicago = new CivilDateTime(2000, 12, 31, 23, 59)
-        |
-        | let instantInChicago =
-        |     dateTimeInChicago.withZone('America/Chicago');
-        |
-        | let instantInSydney =
-        |     new ZonedInstant(instantInChicago.instant, 'Australia/Sydney')
-        |
-        | let dateTimeInSydney = instantInSydney.toCivilDateTime()
-        |
-        | dateTimeInChicago.toString() // 2000-12-31T23:59:00.000000000
-        | dateTimeInSydney.toString()  // 2001-01-01T16:59:00.000000000
+    .codewrapper.fragment
+      img(data-src="assets/code/proposal-temporal.png" style="height: 316px")
+    //- pre.fragment
+    //-   code
+    //-     | let dateTimeInChicago = new CivilDateTime(2000, 12, 31, 23, 59);
+    //-     |
+    //-     | let instantInChicago =
+    //-     |     dateTimeInChicago.withZone('America/Chicago');
+    //-     |
+    //-     | let instantInSydney =
+    //-     |     new ZonedInstant(instantInChicago.instant, 'Australia/Sydney');
+    //-     |
+    //-     | let dateTimeInSydney = instantInSydney.toCivilDateTime();
+    //-     |
+    //-     | dateTimeInChicago.toString() // 2000-12-31T23:59:00.000000000
+    //-     | dateTimeInSydney.toString()  // 2001-01-01T16:59:00.000000000
     p.fragment Има polyfill за babel
+
+    aside.notes
+      | vs momentjs / luxon
 
   section
     h2 Kакво и как да ползваме?
@@ -833,11 +931,14 @@
     h3 MVPs
     ul
       li
-        a(href="http://2ality.com" target="_blank") 2ality.com - Dr. Axel Rauschmayer
+        a(href="http://2ality.com" target="_blank") 2ality.com
       li
         a(href="http://kangax.github.io/compat-table/es2016plus/" target="_blank") kangax.github.io/compat-table
       li
         a(href='https://caniuse.com' target="_blank") caniuse.com
+
+  section(data-background-image="assets/kangax.png" data-background-color="#fff" data-background-size="contain")
+  section(data-background-image="assets/kangax-stages.png" data-background-color="#fff" data-background-size="contain")
 
   section
     h3 babel
@@ -872,14 +973,16 @@
 
   section
     h3 pls no
-    pre
-      code
-        | {
-        |   "transform-es2015-modules-commonjs",
-        |   "transform-es2017-object-entries",
-        |   "transform-object-rest-spread",
-        |   "transform-es2015-destructuring",
-        | }
+    .codewrapper.fragment
+      img(data-src="assets/code/babel-presets-2.png" style="height: 177px")
+    //- pre
+    //-   code
+    //-     | {
+    //-     |   "transform-es2015-modules-commonjs",
+    //-     |   "transform-es2017-object-entries",
+    //-     |   "transform-object-rest-spread",
+    //-     |   "transform-es2015-destructuring",
+    //-     | }
 
   section
     h2 Заключение
