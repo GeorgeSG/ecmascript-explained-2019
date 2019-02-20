@@ -1,8 +1,8 @@
 # ecmascript-explained-2019
 
-Slides for an "ECMAScript Explained" presentation I gave at a [dev.bg](https://dev.bg/) meetup in Sofia, Bulgaria.
+Slides (in Bulgarian) for an "ECMAScript Explained" presentation I gave at a [dev.bg](https://dev.bg/) meetup in Sofia, Bulgaria.
 
-Slides are in Bulgarian.
+Available on [gardev.com/ecmascript-explained-2019](http://gardev.com/ecmascript-explained-2019/)
 
 ## Summary
 - What is ECMAScript
